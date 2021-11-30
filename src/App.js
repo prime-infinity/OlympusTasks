@@ -1,22 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+
+  const x = true
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+      <h2>Hello from react</h2>
+      <h3>hello { x ? 'yes': 'no' }</h3>      
+    </div>  
   );
 }
 
