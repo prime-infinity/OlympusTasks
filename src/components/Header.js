@@ -4,13 +4,13 @@ const Header = ({title}) =>{
 
     return (
       <header>
-          <h1>{title}</h1>
+          <h1 style={{color:'red',backgroundColor:'blue'}}>{title}</h1>
       </header>
     );
   }
   
   Header.propTypes = {
-      title:PropTypes.string.isRequired
+      title:PropTypes.string.isRequired   
   }
 
   export default Header;
