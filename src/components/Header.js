@@ -3,10 +3,14 @@ import Button from './Button'
 
 const Header = ({title}) =>{
 
+  const buttonClicked = () => {
+    console.log("click")
+  }
+ 
     return (
-      <header>
+      <header> 
           <h1>{title}</h1>
-          <Button color='green' text='Add' /> 
+          <Button buttonClicked={buttonClicked}  color='green' text='Add' /> 
       </header>  
     );
   }
