@@ -1,7 +1,8 @@
-const Task = () => {
+const Task = ({task,onDelete}) => {
     return (
-        <div > 
-            <h3>My task</h3>
+        <div> 
+            <h3>{task.text} <button onClick={() => onDelete(task.id)} className="btn btn-danger">X</button> </h3>
+            <p>{task.day}</p>
         </div>
     )
 }
