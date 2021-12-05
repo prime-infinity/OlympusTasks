@@ -16,11 +16,5 @@ const Header = ({title, onAdd, showAdd}) =>{
       title:PropTypes.string.isRequired   
   }
 
-  //css in js
-  /*const headingStyle = {
-      color:'red',
-      backgroundColor:'blue',
-  }*/
-
   export default Header;
   
