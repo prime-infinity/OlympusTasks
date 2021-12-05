@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
+import Footer from './components/Footer'
+import About from './components/About'
+
+
 
 function App() {
 
@@ -86,12 +91,21 @@ function App() {
   }
 
   return (
+    <Router>
     <div className="container">
       <Header title='hello' onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-      { showAddTask && <AddTask onAdd={addTask} />}
-      { tasks.length > 0 ? <Tasks onDelete={deleteTask} onToggle={toggleReminder} tasks={tasks} /> : 'No task to show' }
+      
+      <Route path='/' exact render={()=> (
+        <>
+          { showAddTask && <AddTask onAdd={addTask} />}
+          { tasks.length > 0 ? <Tasks onDelete={deleteTask} onToggle={toggleReminder} tasks={tasks} /> : 'No task to show' }
+        </>
+      ) }/>
+      <Route path='/about' component={About} />
+      <Footer /> 
     </div>  
-  );
+    </Router>
+  )
 }
 
 export default App;
