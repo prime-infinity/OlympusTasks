@@ -1,32 +1,25 @@
 import PinnedTasks from '../components/PinnedTasks'
 import Overview from '../components/Overview'
+import NameHeader from '../components/NameHeader'
+import PendingTasks from '../components/PendingTasks'
+import Footer from '../components/Footer'
 
 const Home = () => {
     return(
         <div className="row justify-content-center">
 
-            <div className="col-11">
+            <div className="col-11 col-md-12">
 
-                <div className="container">
+                <div className="container bg-primary d-md-none">
+                    <NameHeader />
+                </div>
 
-                    <div className="row border mt-5 mb-5">
-                        <div className="col-9">
-                            ss
-                        </div>
-                        <div className="col-3">
-                            <img src="images/prime.jpeg" className="img-fluid rounded-circle" alt="prime" />
-                        </div>
-                    </div>
-
+                <div className="container bg-secondary d-none d-md-block">
+                    <NameHeader />
                 </div>
 
                 <div className="container">
-                    <div className="row mb-5">
-                        <div className="col-6">
-                            <span className="h3 font-weight-bold">Hi Prime</span> <br />
-                            <span>6 tasks are pending</span>
-                        </div>
-                    </div>
+                    <PendingTasks />
                 </div>
                 
                 <div className="container">
@@ -38,8 +31,9 @@ const Home = () => {
                 </div>
 
             </div>
-
+            < Footer />
         </div>
+        
     )
 }
 export default Home

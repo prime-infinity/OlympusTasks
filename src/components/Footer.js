@@ -1,29 +1,32 @@
 const Footer = () => {
     return(
-        <nav className="mobile-bottom-nav d-md-none">
+        <div className="mobile-bottom-nav">
 
             <div className="mobile-bottom-nav__item">
                 <div className="mobile-bottom-nav__item-content">
-                <i className="material-icons" style={{fontSize: "40px"}}>home</i>
+                    {/*<i className="material-icons" style={{fontSize: "40px"}}>home</i>*/}
+                    <span className="font-weight-bold">H</span>
                 <br /> 
                 </div>		
             </div>
 
             <div className="mobile-bottom-nav__item">
                 <div className="mobile-bottom-nav__item-content">
-                <i className="material-icons" style={{fontSize: "40px"}}>import_export</i>
+                    {/*<i className="material-icons" style={{fontSize: "40px"}}>import_export</i>*/}
+                    <span className="font-weight-bold">H</span>
                 <br />
                 </div>		
             </div>
 
             <div className="mobile-bottom-nav__item">
                 <div className="mobile-bottom-nav__item-content">
-                <i className="material-icons" style={{fontSize: "40px"}}>hexagon</i>
+                    {/*<i className="material-icons" style={{fontSize: "40px"}}>hexagon</i>*/}
+                    <span className="font-weight-bold">H</span>
                 <br /> 
                 </div>		
             </div>
 
-        </nav>
+        </div>
     )
 }
 
