@@ -1,10 +1,13 @@
 
+import TaskStast from '../components/TaskStats'
+import PinnedTasks from '../components/PinnedTasks'
+
 const DashRightSide = () => {
     return(
         <div className="d-flex flex-column" id="content-wrapper">
 
             <div id="content">
-                <div className="container-fluid">
+                <div className="container-fluid p-4">
                     <nav className="navbar navbar-light navbar-expand border mb-4 topbar static-top" style={{marginTop: '1.5rem'}}>
                         <div className="container-fluid">
                             
@@ -15,7 +18,7 @@ const DashRightSide = () => {
                             </form>
 
                             <ul className="navbar-nav flex-nowrap ml-auto">
-                                <li className="nav-item dropdown d-sm-none no-arrow"><a aria-expanded="false" data-toggle="dropdown" className="dropdown-toggle nav-link"><i className="fas fa-search"></i></a>
+                                <li className="nav-item dropdown d-sm-none no-arrow">
                                     <div className="dropdown-menu dropdown-menu-right p-3 animated--grow-in" aria-labelledby="searchDropdown">
                                         <form className="form-inline mr-auto navbar-search w-100">
                                             <div className="input-group"><input type="text" className="bg-light form-control border-0 small" placeholder="Search for ..." />
@@ -32,85 +35,39 @@ const DashRightSide = () => {
                                     </div>
                                 </li>
                                 <li className="nav-item dropdown no-arrow mx-1">
-                                    <div className="nav-item dropdown show no-arrow"><a aria-expanded="true" data-toggle="dropdown" className="dropdown-toggle nav-link"><span className="badge badge-danger badge-counter">3+</span><i className="fas fa-bell fa-fw"></i></a>
-                                        {/*<div className="dropdown-menu dropdown-menu-right show dropdown-list animated--grow-in">
-                                            <h6 className="dropdown-header">alerts center</h6><a className="dropdown-item d-flex align-items-center">
-                                                <div className="mr-3">
-                                                    <div className="bg-primary icon-circle"><i className="fas fa-file-alt text-white"></i></div>
-                                                </div>
-                                                <div><span className="small text-gray-500">December 12, 2019</span>
-                                                    <p>A new monthly report is ready to download!</p>
-                                                </div>
-                                            </a><a className="dropdown-item d-flex align-items-center">
-                                                <div className="mr-3">
-                                                    <div className="bg-success icon-circle"><i className="fas fa-donate text-white"></i></div>
-                                                </div>
-                                                <div><span className="small text-gray-500">December 7, 2019</span>
-                                                    <p>$290.29 has been deposited into your account!</p>
-                                                </div>
-                                            </a>
-                                        </div>*/}
-                                    </div>
+                                    {/*<div className="dropdown-menu dropdown-menu-right show dropdown-list animated--grow-in">
+                                        <h6 className="dropdown-header">alerts center</h6><a className="dropdown-item d-flex align-items-center">
+                                            <div className="mr-3">
+                                                <div className="bg-primary icon-circle"><i className="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span className="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a><a className="dropdown-item d-flex align-items-center">
+                                            <div className="mr-3">
+                                                <div className="bg-success icon-circle"><i className="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span className="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a>
+                                    </div>*/}
                                 </li>
                                 <div className="d-none d-sm-block topbar-divider"></div>
                                 <li className="nav-item dropdown no-arrow">
                                     <div className="nav-item dropdown no-arrow">
                                         <span className="d-none d-lg-inline mr-2 text-gray-600 small">Valerie Luna</span>
-                                        <img className="border rounded-circle img-profile" src="images/prime.jpeg" />
+                                        <img className="border rounded-circle img-profile" alt="profileImage" src="images/prime.jpeg" />
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </nav>
-                    <div className="row">
-                        <div className="col-md-6 col-xl-3 mb-4">
-                            <div className="card  border-left-primary py-2">
-                                <div className="card-body">
-                                    <div className="row align-items-center no-gutters">
-                                        <div className="col mr-2">
-                                            <div className="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span></div>
-                                            <div className="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-xl-3 mb-4">
-                            <div className="card  border-left-success py-2">
-                                <div className="card-body">
-                                    <div className="row align-items-center no-gutters">
-                                        <div className="col mr-2">
-                                            <div className="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
-                                            <div className="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-xl-3 mb-4">
-                            <div className="card  border-left-info py-2">
-                                <div className="card-body">
-                                    <div className="row align-items-center no-gutters">
-                                        <div className="col mr-2">
-                                            <div className="text-uppercase text-info font-weight-bold text-xs mb-1"><span>Tasks</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-xl-3 mb-4">
-                            <div className="card  border-left-warning py-2">
-                                <div className="card-body">
-                                    <div className="row align-items-center no-gutters">
-                                        <div className="col mr-2">
-                                            <div className="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>Pending Requests</span></div>
-                                            <div className="text-dark font-weight-bold h5 mb-0"><span>18</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    <PinnedTasks />
+
+                    <TaskStast />
+                    
                 </div>
             </div>
                             

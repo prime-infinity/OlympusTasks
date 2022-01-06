@@ -29,8 +29,7 @@ this stylesheet is for index page only
   top: 35vh;
 }
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg,#4e73df 10%,#224abe);
+  background-color: #17193a;
   background-size: cover;
 }
 .sidebar{
@@ -48,7 +47,8 @@ this stylesheet is for index page only
 
 /* dash right side */
 #content-wrapper {
-  background-color: #f8f9fc;
+  /*background-color: #272a5c;*/
+  background-image: linear-gradient(to top,#272a5c, #5259b9);
   width: 100%;
   overflow-x: hidden;
 }
@@ -66,4 +66,11 @@ this stylesheet is for index page only
 .topbar .navbar-search input {
   font-size: .85rem;
 }
-
+.bg-card-theme{
+  background-color: #17193a;
+  color:#f8f3b9;
+  border-radius: 20px;
+}
+.text-theme{
+  color:#f8f3b9;
+}
