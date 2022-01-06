@@ -1,5 +1,6 @@
 import DashSideBar from '../components/DashSideBar'
 import DashRightSide from '../components/DashRightSide'
+import Footer from '../components/Footer'
 
 const Home = () => {
     return(
@@ -7,6 +8,7 @@ const Home = () => {
 
             <DashSideBar />
             <DashRightSide />
+            <Footer />
             
         </div>
         

@@ -3,21 +3,21 @@ this stylesheet is for index page only
 */
 
 .btn-custom{
-    width:100%;
-    background-color: #ffd441;
-    color: #272a5c;
-    border-radius: 10px;
+  width:100%;
+  background-color: #ffd441;
+  color: #272a5c;
+  border-radius: 10px;
 }
 .bg-theme{
-    background-color: #272a5c;
-    color: #f8f3b9;
-    height: 1000px;
+  background-color: #272a5c;
+  color: #f8f3b9;
+  height: 1000px;
 }
 .introTextBold{
-    font-size: x-large;
+  font-size: x-large;
 }
 .overflow-x-auto{
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 /* dash*/
@@ -47,8 +47,8 @@ this stylesheet is for index page only
 
 /* dash right side */
 #content-wrapper {
-  /*background-color: #272a5c;*/
-  background-image: linear-gradient(to top,#272a5c, #5259b9);
+  background-color: #272a5c;
+  /*background-image: linear-gradient(to top,#272a5c, #5259b9);*/
   width: 100%;
   overflow-x: hidden;
 }
@@ -68,9 +68,46 @@ this stylesheet is for index page only
 }
 .bg-card-theme{
   background-color: #17193a;
-  color:#f8f3b9;
-  border-radius: 20px;
+  color:white;
+  border-radius: 30px;
 }
 .text-theme{
-  color:#f8f3b9;
+  color:white;
+}
+
+/*footer*/
+.mobile-bottom-nav {
+  transition: .5s ease-in;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  will-change: transform;
+  transform: translateZ(0);
+  display: flex;
+  height: 50px;
+  /*background-color: #272a5c;*/
+  color:#ffffff80;
+  z-index: 1;
+  padding-top:5%;
+}
+.mobile-bottom-nav__item {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-bottom-nav__item-content{
+  transition: .5s ease;
+}
+.footer-icon-selected{
+  color:#f8f3b9 !important;
+}
+.footer-menu-div-selecetd-mobile{
+  margin-bottom: 10%;
+}
+.footer-menu-div-selecetd-lap{
+  margin-left: 25%;
 }

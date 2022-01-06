@@ -1,14 +1,16 @@
 
+import NameHeader from '../components/NameHeader'
 import TaskStast from '../components/TaskStats'
 import PinnedTasks from '../components/PinnedTasks'
 
 const DashRightSide = () => {
     return(
-        <div className="d-flex flex-column" id="content-wrapper">
+        <div className="d-flex flex-column" id="content-wrapper" style={{paddingBottom:'20vh'}}>
 
             <div id="content">
                 <div className="container-fluid p-4">
-                    <nav className="navbar navbar-light navbar-expand border mb-4 topbar static-top" style={{marginTop: '1.5rem'}}>
+
+                    {/*<nav className="navbar navbar-light navbar-expand border mb-4 topbar static-top" style={{marginTop: '1.5rem'}}>
                         <div className="container-fluid">
                             
                             <form className="form-inline d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
@@ -51,7 +53,7 @@ const DashRightSide = () => {
                                                 <p>$290.29 has been deposited into your account!</p>
                                             </div>
                                         </a>
-                                    </div>*/}
+                                    </div>*
                                 </li>
                                 <div className="d-none d-sm-block topbar-divider"></div>
                                 <li className="nav-item dropdown no-arrow">
@@ -62,7 +64,9 @@ const DashRightSide = () => {
                                 </li>
                             </ul>
                         </div>
-                    </nav>
+                    </nav>*/}
+
+                    <NameHeader />
 
                     <PinnedTasks />
 

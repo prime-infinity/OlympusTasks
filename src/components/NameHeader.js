@@ -10,12 +10,13 @@ const NameHeader = () => {
     /*},[])*/
 
     return(
-        <div className="row border mt-5 mb-5">
+        <div className="row text-theme mb-5 mt-5">
             <div className="col-9">
-                ss
+                <span className="h2 font-weight-bold">Hi Osamede</span> <br />
+                <span>5 tasks are Pending</span>
             </div>
             <div className="col-3">
-                <img src="images/prime.jpeg" className="img-fluid rounded-circle" alt="prime" />
+                <img className="border rounded-circle img-fluid" alt="profileImage" src="images/prime.jpeg" />
             </div>
         </div>
     )

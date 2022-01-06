@@ -33,7 +33,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-xl-3 mb-4">
+            <div className="col-6 col-md-6 col-xl-3 mb-4 my-auto">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body">
                         <div className="row text-center ">
