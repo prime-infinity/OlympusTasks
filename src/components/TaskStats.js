@@ -3,8 +3,8 @@ const TaskStast = () => {
     return(
         <div className="row">
 
-            <div className="col-12 mb-4 mt-4 text-theme">
-                <span className="h1">Overview</span>
+            <div className="col-12 mb-4 mt-4 mb-4 text-theme">
+                <span className="h3">Overview</span>
             </div>
             
             <div className="col-6 col-md-6 col-xl-3 mb-4">
