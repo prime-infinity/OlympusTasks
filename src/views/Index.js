@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
     return(
+        <div className="container-fluid">
         <div className="row bg-theme">
 
             <div className="col-12 col-md-6 offset-md-3 my-auto">
@@ -24,6 +25,7 @@ const Index = () => {
 
             </div>
             
+        </div>
         </div>
     )
 }

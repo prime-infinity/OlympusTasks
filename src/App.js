@@ -5,7 +5,7 @@ import Home from './views/Home';
 const App = () => {
 
   return (
-    <div className="container-fluid">
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
