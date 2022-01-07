@@ -10,7 +10,7 @@ const TaskStast = () => {
             <div className="col-6 col-md-6 mb-4">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body pt-5 pb-5">
-                        <div className="row text-center">
+                        <div className="row text-center pt-md-4 pb-md-4">
                             <div className="col mr-2">
                                 <div className=" font-weight-bold h1 mb-1"><span>22</span></div>
                                 <div className=""><span>Done</span></div>
@@ -23,7 +23,7 @@ const TaskStast = () => {
             <div className="col-6 col-md-6 mb-4">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body">
-                        <div className="row text-center ">
+                        <div className="row text-center pt-md-4 pb-md-4">
                             <div className="col mr-2">
                                 <div className=" font-weight-bold h1 mb-1"><span>7</span></div>
                                 <div className=""><span>Pending</span></div>
@@ -36,7 +36,7 @@ const TaskStast = () => {
             <div className="col-6 col-md-6 mb-4 my-auto">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body">
-                        <div className="row text-center ">
+                        <div className="row text-center pt-md-4 pb-md-4">
                             <div className="col mr-2">
                                 <div className=" font-weight-bold h1 mb-1"><span>10</span></div>
                                 <div className=""><span>Ongoing</span></div>
@@ -49,7 +49,7 @@ const TaskStast = () => {
             <div className="col-6 col-md-6 mb-4">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body pt-5 pb-5">
-                        <div className="row text-center ">
+                        <div className="row text-center pt-md-4 pb-md-4">
                             <div className="col mr-2">
                                 <div className=" font-weight-bold h1 mb-1"><span>12</span></div>
                                 <div className=""><span>In Review</span></div>

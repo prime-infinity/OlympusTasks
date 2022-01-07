@@ -26,7 +26,7 @@ this stylesheet is for index page only
 }
 .ul-fixed{
   position: fixed;
-  top: 35vh;
+  top: 27vh;
 }
 .bg-gradient-primary {
   background-color: #17193a;
@@ -103,11 +103,22 @@ this stylesheet is for index page only
   transition: .5s ease;
 }
 .footer-icon-selected{
-  color:#f8f3b9 !important;
+  color:#ffd441 !important;
 }
 .footer-menu-div-selecetd-mobile{
   margin-bottom: 10%;
 }
 .footer-menu-div-selecetd-lap{
   margin-left: 25%;
+}
+.img-fluid-native{
+  width:3em;
+  height: 3em;
+}
+.no-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+.no-scroll-bar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
