@@ -10,7 +10,7 @@ const NameHeader = () => {
     /*},[])*/
 
     return(
-        <div className="row text-theme mb-5 mt-5">
+        <div className="row text-theme mb-5 mt-5 d-md-none">
             <div className="col-9">
                 <span className="h2 font-weight-bold">Hi Osamede</span> <br />
                 <span>5 tasks are Pending</span>

@@ -3,7 +3,7 @@ const DashSideBar = () => {
     return(
         <div>
 
-            <nav className="navbar d-none d-md-block navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <nav className="navbar d-none d-md-block navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style={{height:'1000px'}}>
                 <div className="container-fluid d-flex flex-column p-0">
                     <ul className="navbar-nav text-light ul-fixed" id="accordionSidebar">
                         <li className="nav-item pb-3 mobile-bottom-nav__item-content"><svg className="footer-icon-selected" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style={{fontSize: '25px'}}>

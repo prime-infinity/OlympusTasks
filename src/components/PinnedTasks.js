@@ -1,6 +1,6 @@
 const PinnedTasks = () => {
     return (
-        <div className="row flex-row flex-nowrap pb-4 pt-4 no-scroll-bar overflow-x-auto">
+        <div className="row flex-row flex-nowrap pb-4 pt-4 pt-md-5 pb-md-5 no-scroll-bar overflow-x-auto">
 
             <div className="col-5 mb-4 mt-4 text-theme my-auto">
                 <span className="font-weight-bold" style={{fontSize:'larger'}}>

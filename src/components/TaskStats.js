@@ -7,7 +7,7 @@ const TaskStast = () => {
                 <span className="h3">Overview</span>
             </div>
             
-            <div className="col-6 col-md-6 col-xl-3 mb-4">
+            <div className="col-6 col-md-6 mb-4">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body pt-5 pb-5">
                         <div className="row text-center">
@@ -20,7 +20,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-xl-3 mb-4">
+            <div className="col-6 col-md-6 mb-4">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body">
                         <div className="row text-center ">
@@ -33,7 +33,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-xl-3 mb-4 my-auto">
+            <div className="col-6 col-md-6 mb-4 my-auto">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body">
                         <div className="row text-center ">
@@ -46,7 +46,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-xl-3 mb-4">
+            <div className="col-6 col-md-6 mb-4">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body pt-5 pb-5">
                         <div className="row text-center ">

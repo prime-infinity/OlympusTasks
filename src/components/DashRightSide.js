@@ -66,11 +66,22 @@ const DashRightSide = () => {
                         </div>
                     </nav>*/}
 
-                    <NameHeader />
+                    <div className="row">
 
-                    <PinnedTasks />
+                        <div className="col-12 col-md-8 col-lg-6">
 
-                    <TaskStast />
+                            <NameHeader />
+
+                            <PinnedTasks />
+
+                            <TaskStast />
+
+                        </div>
+                        <div className="col-md-4 col-lg-6">
+                            
+                        </div>
+
+                    </div>
                     
                 </div>
             </div>
