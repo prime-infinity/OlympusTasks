@@ -69,9 +69,12 @@ this stylesheet is for index page only
 .bg-card-theme{
   background-color: #17193a;
   color:white;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .text-theme{
+  color:#ffd441;
+}
+.text-theme-two{
   color:white;
 }
 
@@ -112,8 +115,11 @@ this stylesheet is for index page only
   margin-left: 25%;
 }
 .img-fluid-native{
-  width:3em;
-  height: 3em;
+  width:4em;
+  height: 4em;
+}
+.my-auto-native{
+  margin-top: auto !important;
 }
 .no-scroll-bar::-webkit-scrollbar {
   display: none;
