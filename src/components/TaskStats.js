@@ -7,7 +7,7 @@ const TaskStast = () => {
                 <span className="h3 font-weight-bold">Overview</span>
             </div>
             
-            <div className="col-6 col-md-5 col-lg-3 mb-4">
+            <div className="col-6 col-md-6 col-lg-3 mb-4">
                 <div className="card bg-card-theme py-2 text-muted">
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -33,7 +33,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-5 col-lg-3 mb-4">
+            <div className="col-6 col-md-6 col-lg-3 mb-4">
                 <div className="card bg-card-theme py-2 text-muted">
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -59,7 +59,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-5 col-lg-3 mb-4">
+            <div className="col-6 col-md-6 col-lg-3 mb-4">
                 <div className="card bg-card-theme py-2 text-muted">
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -85,7 +85,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-5 col-lg-3 mb-4">
+            <div className="col-6 col-md-6 col-lg-3 mb-4">
                 <div className="card bg-card-theme py-2 text-muted">
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
