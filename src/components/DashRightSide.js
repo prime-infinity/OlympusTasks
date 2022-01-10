@@ -66,9 +66,9 @@ const DashRightSide = () => {
                         </div>
                     </nav>*/}
 
-                    <div className="row">
+                    <div className="row justify-content-center">
 
-                        <div className="col-12 col-md-10 offset-md-1">
+                        <div className="col-12 col-md-11">
 
                             <NameHeader />
                             {/** vary this in lap view */}
@@ -79,6 +79,7 @@ const DashRightSide = () => {
                         </div>
                      
                     </div>
+
                     
                 </div>
             </div>

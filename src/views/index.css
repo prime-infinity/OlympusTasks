@@ -67,7 +67,8 @@ this stylesheet is for index page only
   font-size: .85rem;
 }
 .bg-card-theme{
-  background-color: #17193a;
+  background-color: #1f214a;
+  /*#17193a*/
   color:white;
   border-radius: 20px;
 }
@@ -118,9 +119,12 @@ this stylesheet is for index page only
   width:4em;
   height: 4em;
 }
-.my-auto-native{
-  margin-top: auto !important;
+.text-muted-native{
+  color:#8f90a5;
 }
+/*.my-auto-native{
+  margin-top: auto !important;
+}*/
 .no-scroll-bar::-webkit-scrollbar {
   display: none;
 }
