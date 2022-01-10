@@ -25,7 +25,7 @@ const TaskStast = () => {
                             <div className="col-8">
                                 Done
                             </div>
-                            <div className="col-4 text-right">
+                            <div className="col-4 text-right text-theme">
                                 22
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const TaskStast = () => {
                             <div className="col-8">
                                 Pending
                             </div>
-                            <div className="col-4 text-right">
+                            <div className="col-4 text-right text-theme">
                                 7
                             </div>
                         </div>
@@ -77,7 +77,7 @@ const TaskStast = () => {
                             <div className="col-8">
                                 Ongoing
                             </div>
-                            <div className="col-4 text-right">
+                            <div className="col-4 text-right text-theme">
                                 10
                             </div>
                         </div>
@@ -103,7 +103,7 @@ const TaskStast = () => {
                             <div className="col-8">
                                 In Review
                             </div>
-                            <div className="col-4 text-right">
+                            <div className="col-4 text-right text-theme">
                                 12
                             </div>
                         </div>
