@@ -1,9 +1,10 @@
 
 const DashSideBar = () => {
+    console.log("sidebar supposed to be in lap");
     return(
         <div>
 
-            <nav className="navbar d-none d-md-block navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style={{height:'1500px'}}>
+            <nav className="navbar d-md-block navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style={{height:'1500px'}}>
                 <div className="container-fluid d-flex flex-column p-0">
                     <ul className="navbar-nav text-light ul-fixed" id="accordionSidebar">
                         <li className="nav-item pb-5 mobile-bottom-nav__item-content">

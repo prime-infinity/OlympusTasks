@@ -23,7 +23,7 @@ const PinnedTasks = () => {
                                     <div className="col mr-2">
                                         <div className=" font-weight-bold  mb-1 h3 text-muted-native"><span>Do Something else</span></div>
                                         <div className="text-theme"><span>11-21-20</span></div>
-                                        <p>this is a small note attaced</p>
+                                        <p className="text-muted-native">this is a small note attaced</p>
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@ const PinnedTasks = () => {
                                     <div className="col mr-2">
                                         <div className=" font-weight-bold  mb-1 h3 text-muted-native"><span>Do Something else</span></div>
                                         <div className="text-theme"><span>11-21-20</span></div>
-                                        <p>this is a small note attaced</p>
+                                        <p className="text-muted-native">this is a small note attaced</p>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const PinnedTasks = () => {
                                     <div className="col mr-2">
                                         <div className=" font-weight-bold  mb-1 h3 text-muted-native"><span>Do Something else</span></div>
                                         <div className="text-theme"><span>11-21-20</span></div>
-                                        <p>this is a small note attaced</p>
+                                        <p className="text-muted-native">this is a small note attaced</p>
                                     </div>
                                 </div>
                             </div>

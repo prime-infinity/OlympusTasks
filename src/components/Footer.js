@@ -1,4 +1,5 @@
 const Footer = () => {
+    console.log("footer supposed to be in mobile");
     return(
         <div className="mobile-bottom-nav d-md-none" style={{paddingBottom:'8%'}}>
 

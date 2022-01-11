@@ -1,14 +1,21 @@
 import DashSideBar from '../components/DashSideBar'
 import DashRightSide from '../components/DashRightSide'
 import Footer from '../components/Footer'
+import  { Breakpoint } from 'react-socks';
 
 const Home = () => {
     return(
         <div className="dash-wrapper">
 
-            <DashSideBar />
+            <Breakpoint medium up>
+                <DashSideBar />
+            </Breakpoint>
+            
             <DashRightSide />
-            <Footer />
+            
+            <Breakpoint small down>
+                <Footer />
+            </Breakpoint>
             
         </div>
         
