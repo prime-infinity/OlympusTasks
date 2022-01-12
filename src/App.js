@@ -1,7 +1,7 @@
 import Index from './views/Index'
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import  { BreakpointProvider } from 'react-socks';
-import Home from './views/Home';
+import Home from './views/Home.jsx';
 
 const App = () => {
 
