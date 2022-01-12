@@ -1,11 +1,16 @@
 
-import NameHeader from '../components/NameHeader'
-import TaskStast from '../components/TaskStats'
-import PinnedTasks from '../components/PinnedTasks'
+import NameHeader from './NameHeader'
+import PinnedAndStats from './PinnedAndStats'
+
+import AllTasks from './AllTasks'
+import AddTask from './AddTask'
+import { useSelector } from 'react-redux'
 
 const DashRightSide = () => {
+    const menuState = useSelector((state) => state.menu.value)
+
     return(
-        <div className="d-flex flex-column" id="content-wrapper" style={{paddingBottom:'20vh'}}>
+        <div className="d-flex flex-column" id="content-wrapper" style={{paddingBottom:'100vh'}} >
 
             <div id="content">
                 <div className="container-fluid p-4">
@@ -16,9 +21,12 @@ const DashRightSide = () => {
 
                             <NameHeader />
                             
-                            <PinnedTasks />
-
-                            <TaskStast />
+                            { 
+                                menuState === 0 ? <PinnedAndStats /> : 
+                                menuState === 1 ? <AllTasks /> :
+                                menuState === 3 ? <AddTask /> :
+                                null
+                            }
 
                         </div>
                      
