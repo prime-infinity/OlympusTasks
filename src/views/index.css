@@ -48,7 +48,6 @@ this stylesheet is for index page only
 /* dash right side */
 #content-wrapper {
   background-color: #272a5c;
-  /*background-image: linear-gradient(to top,#272a5c, #5259b9);*/
   width: 100%;
   overflow-x: hidden;
 }
@@ -68,7 +67,6 @@ this stylesheet is for index page only
 }
 .bg-card-theme{
   background-color: #1f214a;
-  /*#17193a*/
   color:white;
   border-radius: 20px;
 }
@@ -90,7 +88,6 @@ this stylesheet is for index page only
   transform: translateZ(0);
   display: flex;
   height: 50px;
-  /*background-color: #272a5c;*/
   color:#ffffff80;
   z-index: 1;
   padding-top:5%;
@@ -108,12 +105,7 @@ this stylesheet is for index page only
 }
 .footer-icon-selected{
   color:#ffd441 !important;
-}
-.footer-menu-div-selecetd-mobile{
-  margin-bottom: 10%;
-}
-.footer-menu-div-selecetd-lap{
-  margin-left: 25%;
+  transition: .5s ease;
 }
 .img-fluid-native{
   width:4em;
@@ -122,9 +114,7 @@ this stylesheet is for index page only
 .text-muted-native{
   color:#8f90a5;
 }
-/*.my-auto-native{
-  margin-top: auto !important;
-}*/
+
 .no-scroll-bar::-webkit-scrollbar {
   display: none;
 }
