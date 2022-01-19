@@ -22,10 +22,10 @@ const TaskStast = () => {
                     </div>
                     <div className="card-footer text-muted">
                         <div className="row">
-                            <div className="col-8">
+                            <div className="col-9">
                                 Done
                             </div>
-                            <div className="col-4 text-right text-theme">
+                            <div className="col-4 text-right text-theme abs-right">
                                 22
                             </div>
                         </div>
@@ -48,10 +48,10 @@ const TaskStast = () => {
                     </div>
                     <div className="card-footer text-muted">
                         <div className="row">
-                            <div className="col-8">
+                            <div className="col-9">
                                 Pending
                             </div>
-                            <div className="col-4 text-right text-theme">
+                            <div className="col-4 text-right text-theme abs-right">
                                 7
                             </div>
                         </div>
@@ -74,10 +74,10 @@ const TaskStast = () => {
                     </div>
                     <div className="card-footer text-muted">
                         <div className="row">
-                            <div className="col-8">
+                            <div className="col-9">
                                 Ongoing
                             </div>
-                            <div className="col-4 text-right text-theme">
+                            <div className="col-4 text-right text-theme abs-right">
                                 10
                             </div>
                         </div>
@@ -100,10 +100,10 @@ const TaskStast = () => {
                     </div>
                     <div className="card-footer ">
                         <div className="row">
-                            <div className="col-8">
+                            <div className="col-9">
                                 In Review
                             </div>
-                            <div className="col-4 text-right text-theme">
+                            <div className="col-4 text-right text-theme abs-right">
                                 12
                             </div>
                         </div>

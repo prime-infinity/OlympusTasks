@@ -4,39 +4,44 @@ import PinnedAndStats from './PinnedAndStats'
 
 import AllTasks from './AllTasks'
 import AddTask from './AddTask'
+import LeftProfileScreen from './LeftProfileScreen'
 import { useSelector } from 'react-redux'
 
 const DashRightSide = () => {
     const menuState = useSelector((state) => state.menu.value)
 
     return(
-        <div className="d-flex flex-column" id="content-wrapper" style={{paddingBottom:'100vh'}} >
+        <>
+            {menuState === 2 ? <LeftProfileScreen /> : null}
 
-            <div id="content">
-                <div className="container-fluid p-4">
-                    
-                    <div className="row justify-content-center">
+            <div className={`d-flex flex-column ${menuState === 2 ? "mobile-view-profile":"pb100vh"} `} id="content-wrapper" >
+                
+                <div id="content">
+                    <div className="container-fluid p-4">
+                        
+                        <div className="row justify-content-center">
 
-                        <div className="col-12 col-md-11">
+                            <div className="col-12 col-md-11">
 
-                            <NameHeader />
-                            
-                            { 
-                                menuState === 0 ? <PinnedAndStats /> : 
-                                menuState === 1 ? <AllTasks /> :
-                                menuState === 3 ? <AddTask /> :
-                                null
-                            }
+                                <NameHeader />
+                                
+                                { 
+                                    menuState === 0 ? <PinnedAndStats /> : 
+                                    menuState === 1 ? <AllTasks /> :
+                                    menuState === 3 ? <AddTask /> :
+                                    <PinnedAndStats />
+                                }
 
+                            </div>
+                        
                         </div>
-                     
-                    </div>
 
-                    
+                        
+                    </div>
                 </div>
+                                
             </div>
-                            
-        </div>
+        </>
         
     )
 }

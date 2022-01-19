@@ -9,7 +9,7 @@ export const menuSlice = createSlice({
       setMenu: (state, action) => {
         state.value = action.payload
       },
-    },
+    },                                                                                                                                                                                                                                                                                                              
 })
 
 export const { setMenu } = menuSlice.actions

@@ -133,3 +133,23 @@ this stylesheet is for index page only
   justify-content: center;
   border-radius: 18px;
 }
+.abs-right{
+  position:absolute;
+  right:0%;
+}
+.pb100vh{
+  padding-bottom: 100vh;
+}
+.mobile-view-profile{
+  position: fixed;
+  left: 75%;
+  top: 8%;
+  bottom: 8%;
+  border-radius: 25px;
+}
+.left-profile-screen{
+  position:absolute;
+  height: 100%;
+  background-color: #1f214a;
+  right:0%;
+}
