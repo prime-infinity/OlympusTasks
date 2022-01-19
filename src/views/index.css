@@ -23,6 +23,7 @@ this stylesheet is for index page only
 /* dash*/
 .dash-wrapper{
   display: flex;
+  background-color: #1f214a;
 }
 .ul-fixed{
   position: fixed;
@@ -140,16 +141,29 @@ this stylesheet is for index page only
 .pb100vh{
   padding-bottom: 100vh;
 }
+
 .mobile-view-profile{
+  transition: transform .4s linear;
   position: fixed;
-  left: 75%;
+  transform: translateX(75%);
   top: 8%;
   bottom: 8%;
   border-radius: 25px;
 }
 .left-profile-screen{
-  position:absolute;
+  position:fixed;
   height: 100%;
   background-color: #1f214a;
   right:0%;
 }
+@media (min-width: 768px){
+  .mobile-view-profile{
+    transform: translateX(50%);
+    top: 0%;
+    bottom: 0%;
+  }
+  .left-profile-screen{
+    left: 6.5rem;
+  }
+}
+
