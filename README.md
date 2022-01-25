@@ -11,6 +11,7 @@ In its intended final form(which might be subject to changes), it is intended to
 
 - Basic web technologies such as HTML5, CSS3, Bootstrap
 - React.js For the frontend
+- Redux for state management
 - Ionic for hybrid implemetation(upcoming)
 - Node.js and express.js for backend
 - Firebase for authentication
