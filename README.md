@@ -24,3 +24,6 @@ In its intended final form(which might be subject to changes), it is intended to
 - Users who are signed in will have their tasks stored in a mongodb database, making it available from any device.
 - Users who are subscribed to notifications will be sent notifications on their pending or uncompleted tasks.
 - Users who are signed in can share tasks with other users of the application.
+
+## Website
+[Olympus Tasks](https://olympustasks.netlify.app/)
