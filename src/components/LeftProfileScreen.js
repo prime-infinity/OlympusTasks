@@ -9,8 +9,8 @@ const LeftProfileScreen = () => {
                             <img className="border rounded-circle" style={{width:'7em',height:'7em'}} alt="profileImage" src="images/prime.jpeg" />
                         </div> <br />
 
-                        <div className="col-12 mt-5">
-                            <span className="h1 font-weight-bold text-muted-native">
+                        <div className="col-12 mt-3">
+                            <span className="h4 font-weight-bold text-muted-native">
                                 Osamede
                             </span>
                         </div>

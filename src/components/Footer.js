@@ -21,13 +21,17 @@ const Footer = () => {
 
             <div className="mobile-bottom-nav__item">
                 <div className="mobile-bottom-nav__item-content">
-                    <i onClick={() => dispatch(setMenu(1))} className={`typcn typcn-th-large ${menuState === 1 ? "footer-icon-selected": ""} `} style={{fontSize: '30px'}}></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" onClick={() => dispatch(setMenu(1))} className={` ${menuState === 1 ? "footer-icon-selected": ""} `} style={{fontSize: '30px'}} width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
                 </div>		
             </div>
 
             <div className="mobile-bottom-nav__item">
                 <div className="mobile-bottom-nav__item-content">
-                    <i onClick={() => dispatch(setMenu(3))} className={`typcn typcn-plus ${menuState === 3 ? "footer-icon-selected": ""} `} style={{fontSize: '30px'}}></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" onClick={() => dispatch(setMenu(3))} className={` ${menuState === 3 ? "footer-icon-selected": ""} `} style={{fontSize: '30px'}} width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
                 </div>		
             </div>
 

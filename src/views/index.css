@@ -2,30 +2,30 @@
 this stylesheet is for index page only
 */
 
-.btn-custom{
-  width:100%;
+.btn-custom {
+  width: 100%;
   background-color: #ffd441;
   color: #272a5c;
   border-radius: 10px;
 }
-.bg-theme{
+.bg-theme {
   background-color: #272a5c;
   color: #f8f3b9;
   height: 1000px;
 }
-.introTextBold{
+.introTextBold {
   font-size: x-large;
 }
-.overflow-x-auto{
+.overflow-x-auto {
   overflow-x: auto;
 }
 
 /* dash*/
-.dash-wrapper{
+.dash-wrapper {
   display: flex;
   background-color: #1f214a;
 }
-.ul-fixed{
+.ul-fixed {
   position: fixed;
   top: 27vh;
 }
@@ -33,17 +33,17 @@ this stylesheet is for index page only
   background-color: #17193a;
   background-size: cover;
 }
-.sidebar{
+.sidebar {
   min-height: 100vh;
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .sidebar {
     overflow: visible;
-    width: 6.5rem!important;
+    width: 6.5rem !important;
   }
 }
 .align-items-start {
-  align-items: flex-start!important;
+  align-items: flex-start !important;
 }
 
 /* dash right side */
@@ -52,7 +52,7 @@ this stylesheet is for index page only
   width: 100%;
   overflow-x: hidden;
 }
-.img-profile{
+.img-profile {
   height: 2rem;
   width: 2rem;
 }
@@ -64,23 +64,23 @@ this stylesheet is for index page only
 }
 
 .topbar .navbar-search input {
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
-.bg-card-theme{
+.bg-card-theme {
   background-color: #1f214a;
-  color:white;
+  color: white;
   border-radius: 20px;
 }
-.text-theme{
-  color:#f8f3b9;
+.text-theme {
+  color: #f8f3b9;
 }
-.text-theme-two{
-  color:white;
+.text-theme-two {
+  color: white;
 }
 
 /*footer*/
 .mobile-bottom-nav {
-  transition: .5s ease-in;
+  transition: 0.5s ease-in;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -89,9 +89,10 @@ this stylesheet is for index page only
   transform: translateZ(0);
   display: flex;
   height: 50px;
-  color:#ffffff80;
+  color: #ffffff80;
   z-index: 1;
-  padding-top:5%;
+  padding-top: 5%;
+  backdrop-filter: blur(10px);
 }
 .mobile-bottom-nav__item {
   flex-grow: 1;
@@ -101,27 +102,27 @@ this stylesheet is for index page only
   justify-content: center;
 }
 
-.mobile-bottom-nav__item-content{
-  transition: .5s ease;
+.mobile-bottom-nav__item-content {
+  transition: 0.5s ease;
 }
-.footer-icon-selected{
-  color:#ffd441 !important;
-  transition: .5s ease;
+.footer-icon-selected {
+  color: #ffd441 !important;
+  transition: 0.5s ease;
 }
-.img-fluid-native{
-  width:4em;
+.img-fluid-native {
+  width: 4em;
   height: 4em;
 }
-.text-muted-native{
-  color:#8f90a5;
+.text-muted-native {
+  color: #8f90a5;
 }
 
 .no-scroll-bar::-webkit-scrollbar {
   display: none;
 }
 .no-scroll-bar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .swiper {
   width: 100%;
@@ -134,36 +135,51 @@ this stylesheet is for index page only
   justify-content: center;
   border-radius: 18px;
 }
-.abs-right{
-  position:absolute;
-  right:0%;
+.abs-right {
+  position: absolute;
+  right: 0%;
 }
-.pb100vh{
+.pb100vh {
   padding-bottom: 100vh;
 }
+.custom-input {
+  background-color: #1f214a;
+  border: 0px;
+}
+.custom-input:hover {
+  background-color: #1f214a !important;
+  color: #f8f3b9;
+}
+.custom-input:focus:focus {
+  background-color: #1f214a !important;
+  color: #f8f3b9;
+}
+.custom-input:focus:active {
+  background-color: #1f214a !important;
+  color: #f8f3b9;
+}
 
-.mobile-view-profile{
-  transition: transform .4s linear;
+.mobile-view-profile {
+  transition: transform 0.4s linear;
   position: fixed;
   transform: translateX(75%);
   top: 8%;
   bottom: 8%;
   border-radius: 25px;
 }
-.left-profile-screen{
-  position:fixed;
+.left-profile-screen {
+  position: fixed;
   height: 100%;
   background-color: #1f214a;
-  right:0%;
+  right: 0%;
 }
-@media (min-width: 768px){
-  .mobile-view-profile{
+@media (min-width: 768px) {
+  .mobile-view-profile {
     transform: translateX(50%);
     top: 0%;
     bottom: 0%;
   }
-  .left-profile-screen{
+  .left-profile-screen {
     left: 6.5rem;
   }
 }
-
