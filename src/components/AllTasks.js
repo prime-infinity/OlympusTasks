@@ -45,16 +45,16 @@ const AllTasks = () => {
                                 <div className="col-2 text-theme">
                                     
                                     {
-                                        i <= 2 ? <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                        task.cat === 3 ? <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg> :
-                                        i >= 3 && i < 5 ? <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                        task.cat === 0 ? <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                 </svg> :
-                                        i >= 5 && i < 7 ? <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                        task.cat === 1 ? <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                                 </svg> :
-                                        i >= 7 ? <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                        task.cat === 2 ? <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                                                 </svg> :
                                         null
