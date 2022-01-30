@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
 import { addTask } from '../redux/taskSlice'
+import { setMenu } from '../redux/menuSlice'
 
 const AddTask = () => {
     const dispatch = useDispatch()
@@ -12,10 +13,6 @@ const AddTask = () => {
     const addNewTask = (e) => {
         e.preventDefault()
 
-        /*console.log(taskName);
-        console.log(taskNote);
-        console.log(taskPined);*/
-
         const newTask = {
             name:taskName,
             note:taskNote,
@@ -24,6 +21,11 @@ const AddTask = () => {
         }
 
         dispatch(addTask(newTask))
+
+        setTaskName("")
+        setTaskNote("")
+
+        dispatch(setMenu(1))
 
     }
 
