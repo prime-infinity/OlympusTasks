@@ -13,10 +13,14 @@ const AddTask = () => {
     const addNewTask = (e) => {
         e.preventDefault()
 
+        let today = new Date()
+        let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+
         const newTask = {
             name:taskName,
             note:taskNote,
             pined:taskPined,
+            date:date,
             cat:0,
         }
 

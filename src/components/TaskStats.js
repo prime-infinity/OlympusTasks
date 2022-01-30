@@ -1,36 +1,18 @@
+import { useSelector } from 'react-redux'
 
 const TaskStast = () => {
+    const tasks = useSelector((state) => state.task.tasks)
+    const pendingTasks = tasks.filter((task) => task.cat === 0).length
+    const onGoingTasks = tasks.filter((task) => task.cat === 1).length
+    const inReviewTasks = tasks.filter((task) => task.cat === 2).length
+    const doneTasks = tasks.filter((task) => task.cat === 3).length
+
+
     return(
         <div className="row justify-content-between">
 
             <div className="col-12 mb-4 mt-4 mb-4 text-theme">
                 <span className="h3 font-weight-bold">Overview</span>
-            </div>
-            
-            <div className="col-6 col-md-6 col-lg-3 mb-4">
-                <div className="card bg-card-theme py-2 text-muted">
-                    <div className="card-body pt-5 pb-5">
-                        <div className="row justify-content-center text-center pt-md-4 pb-md-4">
-                            <div className="col-6">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 footer-icon-selected" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card-footer text-muted">
-                        <div className="row">
-                            <div className="col-12">
-                                Done
-                            </div>
-                            <div className="col-6 text-right text-theme abs-right">
-                                22
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div className="col-6 col-md-6 col-lg-3 mb-4">
@@ -52,7 +34,7 @@ const TaskStast = () => {
                                 Pending
                             </div>
                             <div className="col-6 text-right text-theme abs-right">
-                                7
+                                {pendingTasks}
                             </div>
                         </div>
                     </div>
@@ -78,7 +60,7 @@ const TaskStast = () => {
                                 Ongoing
                             </div>
                             <div className="col-6 text-right text-theme abs-right">
-                                10
+                                {onGoingTasks}
                             </div>
                         </div>
                     </div>
@@ -104,13 +86,40 @@ const TaskStast = () => {
                                 In Review
                             </div>
                             <div className="col-6 text-right text-theme abs-right">
-                                12
+                                {inReviewTasks}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="col-6 col-md-6 col-lg-3 mb-4">
+                <div className="card bg-card-theme py-2 text-muted">
+                    <div className="card-body pt-5 pb-5">
+                        <div className="row justify-content-center text-center pt-md-4 pb-md-4">
+                            <div className="col-6">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 footer-icon-selected" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card-footer text-muted">
+                        <div className="row">
+                            <div className="col-12">
+                                Done
+                            </div>
+                            <div className="col-6 text-right text-theme abs-right">
+                                {doneTasks}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            
         </div>
         
     )

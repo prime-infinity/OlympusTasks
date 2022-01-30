@@ -25,7 +25,8 @@ const AllTasks = () => {
                             <div className="row">
 
                                 <div className="col-12 text-break text-center">
-                                    <span className="h3 font-weight-bold">{task.name}</span>
+                                    <span className="h3 font-weight-bold text-theme">{task.name}</span> <br />
+                                    <span className="font-weight-bold">{task.date}</span>
                                 </div>
 
                             </div>
