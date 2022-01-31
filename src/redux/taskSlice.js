@@ -23,6 +23,21 @@ export const taskSlice = createSlice({
           ...task,pined:true
         }:task)
       },
+      markOngoing:(state,action) => {
+        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+          ...task,cat:1
+        }:task)
+      },
+      markInreview:(state,action) => {
+        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+          ...task,cat:2
+        }:task)
+      },
+      markDone:(state,action) => {
+        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+          ...task,cat:3
+        }:task)
+      }
     },                                                                                                                                                                                                                                                                                                              
 })
 
@@ -30,4 +45,7 @@ export const { addTask } = taskSlice.actions
 export const { deleteTask } = taskSlice.actions
 export const { unPinTask } = taskSlice.actions
 export const { pinTask } = taskSlice.actions
+export const { markOngoing } = taskSlice.actions
+export const { markInreview } = taskSlice.actions
+export const { markDone } = taskSlice.actions
 export default taskSlice.reducer 

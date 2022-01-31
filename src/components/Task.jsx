@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
 import { deleteTask } from '../redux/taskSlice'
+
+//task operations
 import { unPinTask } from '../redux/taskSlice'
 import { pinTask } from '../redux/taskSlice'
+
+//task operations 2
+import { markOngoing } from '../redux/taskSlice'
+import { markInreview } from '../redux/taskSlice'
+import { markDone } from '../redux/taskSlice'
 
 function Task({task,index}) {
     
@@ -79,19 +86,30 @@ function Task({task,index}) {
 
                         <div className="col-8">
                             <div className={`row justify-content-end ${optSelec === index ? 'd-flex':'d-none'}`} id={`${index}`}>
-
-                                {/*<div className="col-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
-                                        <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-
+                                 
                                 <div className="col-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
-                                        <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
-                                    </svg>
-                                </div>*/}
-
+                                    {
+                                        task.cat === 0 ? 
+                                            <svg xmlns="http://www.w3.org/2000/svg" onClick={()=> dispatch(markOngoing(task.name)) } width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                            </svg>
+                                            :
+                                        task.cat === 1 ?   
+                                            <svg xmlns="http://www.w3.org/2000/svg" onClick={()=> dispatch(markInreview(task.name)) } width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                            </svg> 
+                                            :
+                                        task.cat === 2 ?
+                                            <svg xmlns="http://www.w3.org/2000/svg" onClick={()=> dispatch(markDone(task.name)) } width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            :
+                                        <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{fontSize: '25px'}}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    }
+                                </div>
+                        
                                 <div className="col-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" onClick={()=> dispatch(deleteTask(task.name)) } width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
                                         <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
