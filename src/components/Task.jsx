@@ -1,15 +1,30 @@
 import { useState } from "react";
+import { useDispatch } from 'react-redux'
+import { deleteTask } from '../redux/taskSlice'
 
 function Task({task,index}) {
     
+    const dispatch = useDispatch()
     const [optSelec, setOptSel] = useState(-1)
+    const [noteSelec, setNoteSel] = useState(-1)
 
     return ( 
         <div className="col-12 col-md-6 mb-5 p-0 pl-md-1 pr-md-1">
 
             <div className="card bg-card-theme py-2 text-muted">
 
-                
+                <div className={`card-header ${task.pined ? 'pb-0 pt-0':''}`}>
+                    
+                    <div className="row">
+                        <div className="col-3">
+                        {task.pined &&
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" style={{fontSize: '25px'}} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg> }
+                        </div>
+                    </div>
+                    
+                </div>
 
                 <div className="card-body">
 
@@ -18,6 +33,10 @@ function Task({task,index}) {
                         <div className="col-12 text-break text-center">
                             <span className="h3 font-weight-bold text-theme">{task.name}</span> <br />
                             <span className="font-weight-bold">{task.date}</span> <br />
+                        </div>
+
+                        <div className={`col-12 text-break text-center ${noteSelec === index ? 'd-flex':'d-none'}`}>
+                            {task.note}
                         </div>
 
                     </div>
@@ -49,9 +68,9 @@ function Task({task,index}) {
                         </div>
 
                         <div className="col-8">
-                            <div className={`row ${optSelec === index ? 'd-flex':'d-none'}`} id={`${index}`}>
+                            <div className={`row justify-content-end ${optSelec === index ? 'd-flex':'d-none'}`} id={`${index}`}>
 
-                                <div className="col-3">
+                                {/*<div className="col-3">
                                     <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
                                         <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
                                     </svg>
@@ -61,19 +80,19 @@ function Task({task,index}) {
                                     <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
                                         <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
                                     </svg>
-                                </div>
+                                </div>*/}
 
                                 <div className="col-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
-                                        <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" onClick={()=> dispatch(deleteTask(task.name)) } width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
+                                        <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
                                     </svg>
                                 </div>
 
-                                <div className="col-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
+                                {task.note.length > 0 && <div className="col-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" onClick={noteSelec === index ? ()=>setNoteSel(-1) :()=>setNoteSel(index)}  width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" style={{fontSize: '25px'}}>
                                         <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
                                     </svg>
-                                </div>
+                                </div>}
 
                             </div>
                         </div>
