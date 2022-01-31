@@ -18,7 +18,7 @@ const Index = () => {
 
                 <div className="row pt-5 justify-content-center">
                     <div className="col-11 col-md-8  text-center font-weight-bold">
-                        <p className="introTextBold pb-3">Let The gods themselves manage your tasks for you</p>
+                        <p className="introTextBold pb-3">Manage your tasks <br /> Like a god!</p>
                         <Link to="/home"><button className="btn btn-custom pt-3 pb-3 font-weight-bold">Get Started</button></Link>
                     </div>
                 </div>
