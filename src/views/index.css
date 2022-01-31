@@ -158,6 +158,9 @@ this stylesheet is for index page only
   background-color: #1f214a !important;
   color: #f8f3b9;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 
 .mobile-view-profile {
   transition: transform 0.4s linear;
