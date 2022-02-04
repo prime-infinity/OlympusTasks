@@ -168,7 +168,16 @@ this stylesheet is for index page only
   left: 0%;
   top: 0%;
   height: 100%;
-  z-index: 12;
+  z-index: 2;
+}
+.close-card {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 1%;
+  cursor: pointer;
+  z-index: 3;
 }
 
 .mobile-view-profile {
