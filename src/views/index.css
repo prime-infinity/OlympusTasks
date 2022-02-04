@@ -161,6 +161,15 @@ this stylesheet is for index page only
 .cursor-pointer {
   cursor: pointer;
 }
+.cardFixed {
+  transition: 0.5s ease;
+  position: fixed;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  z-index: 12;
+}
 
 .mobile-view-profile {
   transition: transform 0.4s linear;

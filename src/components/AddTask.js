@@ -55,9 +55,9 @@ const AddTask = () => {
 
     return (
         
-        <div className="row">
+        <div className="row justify-content-center">
 
-            <div className="col-12 col-md-6 offset-md-3">
+            <div className="col-12 col-md-8 col-lg-6">
 
             <form onSubmit={addNewTask}>
 

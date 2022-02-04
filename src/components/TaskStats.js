@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useSelector } from 'react-redux'
 
 const TaskStast = () => {
@@ -7,6 +8,7 @@ const TaskStast = () => {
     const inReviewTasks = tasks.filter((task) => task.cat === 2).length
     const doneTasks = tasks.filter((task) => task.cat === 3).length
 
+    const [cardStateChange, setCardState] = useState(-1)
 
     return(
         <div className="row justify-content-between">
@@ -15,8 +17,8 @@ const TaskStast = () => {
                 <span className="h3 font-weight-bold">Overview</span>
             </div>
 
-            <div className="col-6 col-md-6 col-lg-3 mb-4">
-                <div className="card bg-card-theme py-2 text-muted">
+            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+                <div onClick={()=>setCardState(0)} className={`card bg-card-theme py-2 text-muted ${cardStateChange === 0 ? "cardFixed" : ""}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             <div className="col-6">
@@ -41,8 +43,8 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-lg-3 mb-4">
-                <div className="card bg-card-theme py-2 text-muted">
+            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+                <div onClick={()=>setCardState(1)} className={` card bg-card-theme py-2 text-muted ${cardStateChange === 1 ? "cardFixed" : ""}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             <div className="col-6 ">
@@ -67,8 +69,8 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-lg-3 mb-4">
-                <div className="card bg-card-theme py-2 text-muted">
+            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+                <div onClick={()=>setCardState(2)} className={` card bg-card-theme py-2 text-muted ${cardStateChange === 2 ? "cardFixed" : ""}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             <div className="col-6 ">
@@ -93,8 +95,8 @@ const TaskStast = () => {
                 </div>
             </div>
             
-            <div className="col-6 col-md-6 col-lg-3 mb-4">
-                <div className="card bg-card-theme py-2 text-muted">
+            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+                <div onClick={()=>setCardState(3)} className={` card bg-card-theme py-2 text-muted ${cardStateChange === 3 ? "cardFixed" : ""}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             <div className="col-6">
