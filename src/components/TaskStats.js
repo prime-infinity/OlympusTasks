@@ -11,8 +11,10 @@ const TaskStast = () => {
     const inReviewTasks = tasks.filter((task) => task.cat === 2)
     const doneTasks = tasks.filter((task) => task.cat === 3)
 
+
     const [cardStateChange, setCardState] = useState(-1)
 
+    
     const closeCard = ()=> {
         setCardState(-1)
     }

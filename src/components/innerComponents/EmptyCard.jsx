@@ -17,7 +17,7 @@ function EmptyCard() {
                             <div className=" font-weight-bold  mb-1 h3 text-muted-native"><span>No tasks yet</span></div>
                             
                             <div className="row justify-content-center mt-4">
-                                <div className="col-6">
+                                <div className="col-10 col-md-5">
                                     <button onClick={() => dispatch(setMenu(3))} className="btn btn-custom pt-3 pb-3 font-weight-bold">Add</button>
                                 </div>
                             </div>
