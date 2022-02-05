@@ -68,8 +68,10 @@ this stylesheet is for index page only
 }
 .bg-card-theme {
   background-color: #1f214a;
-  color: white;
   border-radius: 20px;
+}
+.bg-card-untheme {
+  background-color: #272a5c;
 }
 .text-theme {
   color: #f8f3b9;

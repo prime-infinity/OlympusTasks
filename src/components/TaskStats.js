@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import EmptyCard from './innerComponents/EmptyCard'
 import Task from './Task'
@@ -13,17 +13,20 @@ const TaskStast = () => {
 
 
     const [cardStateChange, setCardState] = useState(-1)
+    const [fT,setFT] = useState([])
 
     
     const closeCard = ()=> {
         setCardState(-1)
     }
 
-    const divWithFiltered = (
-        tasks.length === 0 ? <EmptyCard /> : tasks.map((task,i) => (
+    useEffect(()=>{
+        setFT(cardStateChange === -1 ? []:cardStateChange === 0 ? pendingTasks:cardStateChange === 1 ? onGoingTasks:cardStateChange === 2?inReviewTasks:cardStateChange===3?doneTasks:[])
+    },[cardStateChange])
 
+    const divWithFiltered = (
+        tasks.length === 0 ? <EmptyCard /> : fT.map((task,i) => (
             <Task task={task} index={i}  key={i}/>
-            
         ))
     )
 
@@ -43,7 +46,7 @@ const TaskStast = () => {
             </div>
 
             <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
-                <div onClick={()=>setCardState(0)} className={`card bg-card-theme py-2 text-muted ${cardStateChange === 0 ? "cardFixed" : ""}`}>
+                <div onClick={()=>setCardState(0)} className={`card py-2 text-muted ${cardStateChange === 0 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             {cardStateChange === -1 ?
@@ -73,7 +76,7 @@ const TaskStast = () => {
             </div>
 
             <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
-                <div onClick={()=>setCardState(1)} className={` card bg-card-theme py-2 text-muted ${cardStateChange === 1 ? "cardFixed" : ""}`}>
+                <div onClick={()=>setCardState(1)} className={` card py-2 text-muted ${cardStateChange === 1 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             {cardStateChange === -1 ?
@@ -101,7 +104,7 @@ const TaskStast = () => {
             </div>
 
             <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
-                <div onClick={()=>setCardState(2)} className={` card bg-card-theme py-2 text-muted ${cardStateChange === 2 ? "cardFixed" : ""}`}>
+                <div onClick={()=>setCardState(2)} className={` card py-2 text-muted ${cardStateChange === 2 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             {cardStateChange === -1 ?
@@ -130,7 +133,7 @@ const TaskStast = () => {
             </div>
             
             <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
-                <div onClick={()=>setCardState(3)} className={` card bg-card-theme py-2 text-muted ${cardStateChange === 3 ? "cardFixed" : ""}`}>
+                <div onClick={()=>setCardState(3)} className={` card py-2 text-muted ${cardStateChange === 3 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
                             {cardStateChange === -1 ?
