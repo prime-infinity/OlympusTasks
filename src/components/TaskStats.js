@@ -50,7 +50,7 @@ const TaskStast = () => {
                 <span className="h3 font-weight-bold">Overview</span>
             </div>
 
-            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
                 <div onClick={()=>setCardState(0)} className={`card py-2 text-muted ${cardStateChange === 0 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -80,7 +80,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
                 <div onClick={()=>setCardState(1)} className={` card py-2 text-muted ${cardStateChange === 1 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -108,7 +108,7 @@ const TaskStast = () => {
                 </div>
             </div>
 
-            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
                 <div onClick={()=>setCardState(2)} className={` card py-2 text-muted ${cardStateChange === 2 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -137,7 +137,7 @@ const TaskStast = () => {
                 </div>
             </div>
             
-            <div className="col-6 col-md-6 col-lg-3 mb-4 cursor-pointer">
+            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
                 <div onClick={()=>setCardState(3)} className={` card py-2 text-muted ${cardStateChange === 3 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                     <div className="card-body pt-5 pb-5">
                         <div className="row justify-content-center text-center pt-md-4 pb-md-4">
