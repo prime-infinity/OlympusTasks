@@ -20,7 +20,7 @@ const TaskStast = () => {
         setCardState(-1)
     }
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         setFtFunc()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[cardStateChange])
@@ -32,7 +32,16 @@ const TaskStast = () => {
         cardStateChange === 2?inReviewTasks:
         cardStateChange===3?doneTasks:
         [])
-    }
+    }*/
+
+    useEffect(()=> {
+        setFT(cardStateChange === -1 ? []:
+        cardStateChange === 0 ? tasks.filter((task) => task.cat === 0):
+        cardStateChange === 1 ? tasks.filter((task) => task.cat === 1):
+        cardStateChange === 2?tasks.filter((task) => task.cat === 2):
+        cardStateChange===3?tasks.filter((task) => task.cat === 3):
+        [])
+    },[cardStateChange,tasks])
 
     const divWithFiltered = (
         tasks.length === 0 ? <EmptyCard /> : fT.map((task,i) => (
