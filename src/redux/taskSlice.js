@@ -10,31 +10,30 @@ export const taskSlice = createSlice({
         state.tasks = [...state.tasks,action.payload]
       },
       deleteTask:(state,action) => {
-        /** this will filter the arrry by name, so dups will be removed */
-        state.tasks = state.tasks.filter((task)=> task.name !== action.payload)
+        state.tasks = state.tasks.filter((task)=> task.id !== action.payload)
       },
       unPinTask:(state,action) => {
-        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+        state.tasks = state.tasks.map((task) => task.id === action.payload ? {
           ...task,pined:false
         }:task)
       },
       pinTask:(state,action) => {
-        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+        state.tasks = state.tasks.map((task) => task.id === action.payload ? {
           ...task,pined:true
         }:task)
       },
       markOngoing:(state,action) => {
-        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+        state.tasks = state.tasks.map((task) => task.id === action.payload ? {
           ...task,cat:1
         }:task)
       },
       markInreview:(state,action) => {
-        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+        state.tasks = state.tasks.map((task) => task.id === action.payload ? {
           ...task,cat:2
         }:task)
       },
       markDone:(state,action) => {
-        state.tasks = state.tasks.map((task) => task.name === action.payload ? {
+        state.tasks = state.tasks.map((task) => task.id === action.payload ? {
           ...task,cat:3
         }:task)
       }

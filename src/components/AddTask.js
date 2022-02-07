@@ -37,6 +37,7 @@ const AddTask = () => {
         let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 
         const newTask = {
+            id:Date.now(),
             name:taskName,
             note:taskNote,
             pined:taskPined,
