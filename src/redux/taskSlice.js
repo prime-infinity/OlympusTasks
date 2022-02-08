@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit' 
+import { loadFromLocalStorage,saveTasksToLocalStorage } from '../helpers/controlStorage'
+//import { debounce } from "lodash";
 
 export const taskSlice = createSlice({
     name: 'task',
@@ -6,6 +8,9 @@ export const taskSlice = createSlice({
       tasks: [],
     },
     reducers: {
+      getTasks: (state, action) => {
+        state.tasks = action.payload
+      },
       addTask: (state, action) => {
         state.tasks = [...state.tasks,action.payload]
       },
@@ -40,6 +45,7 @@ export const taskSlice = createSlice({
     },                                                                                                                                                                                                                                                                                                              
 })
 
+const { getTasks } = taskSlice.actions
 export const { addTask } = taskSlice.actions
 export const { deleteTask } = taskSlice.actions
 export const { unPinTask } = taskSlice.actions
@@ -47,4 +53,14 @@ export const { pinTask } = taskSlice.actions
 export const { markOngoing } = taskSlice.actions
 export const { markInreview } = taskSlice.actions
 export const { markDone } = taskSlice.actions
+
+export const getInitTasks = () => async dispatch => {
+  const dataFromGet = await loadFromLocalStorage()
+  dispatch(getTasks(dataFromGet))
+}
+
+export const saveTaskToAny = () => (dispatch,getState) => {
+  saveTasksToLocalStorage(getState().task.tasks);  
+}
+
 export default taskSlice.reducer 

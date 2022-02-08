@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux'
 import { addTask } from '../redux/taskSlice'
 import { setMenu } from '../redux/menuSlice'
 
+import { saveTaskToAny } from "../redux/taskSlice"
+
 const AddTask = () => {
     const dispatch = useDispatch()
 
@@ -51,6 +53,7 @@ const AddTask = () => {
         setTaskNote("")
 
         dispatch(setMenu(1))
+        dispatch(saveTaskToAny())
 
     }
 
