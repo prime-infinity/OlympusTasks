@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { useDispatch } from 'react-redux'
 import { addTask } from '../redux/taskSlice'
 import { setMenu } from '../redux/menuSlice'
 
 import { saveTaskToAny } from "../redux/taskSlice"
+import { debounce } from "lodash";
 
 const AddTask = () => {
     const dispatch = useDispatch()
@@ -29,6 +30,9 @@ const AddTask = () => {
         runCheck()
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const debouncedSubmit = useCallback(debounce(() => dispatch(saveTaskToAny()), 2000), []);
+
     const addNewTask = (e) => {
         e.preventDefault()
         if(taskName.trim().length > 50 || taskName.trim() === "" || taskNote.length > 150){
@@ -53,8 +57,8 @@ const AddTask = () => {
         setTaskNote("")
 
         dispatch(setMenu(1))
-        dispatch(saveTaskToAny())
 
+        debouncedSubmit()
     }
 
     return (

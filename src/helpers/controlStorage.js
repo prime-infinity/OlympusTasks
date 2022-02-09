@@ -15,7 +15,6 @@ export const saveTasksToLocalStorage = (tasks) => {
     try {
         const serialisedState = JSON.stringify(tasks);
         localStorage.setItem("olmpustasks", serialisedState);
-        /*console.log("i am saved");*/
     } catch (e) {
         console.warn(e);
     }

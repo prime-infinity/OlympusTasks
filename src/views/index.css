@@ -186,7 +186,7 @@ this stylesheet is for index page only
   transition: transform 0.4s linear;
   position: fixed;
   transform: translateX(75%);
-  top: 8%;
+  top: 0%;
   bottom: 8%;
   border-radius: 25px;
 }

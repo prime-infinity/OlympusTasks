@@ -14,7 +14,7 @@ const DashRightSide = () => {
         <>
             {menuState === 2 ? <LeftProfileScreen /> : null}
         
-            <div className={`d-flex flex-column ${menuState === 2 ? "mobile-view-profile":"pb100vh"} `} id="content-wrapper" >
+            <div className={`d-flex flex-column ${menuState === 2 ? "mobile-view-profile":""} `} id="content-wrapper" >
                 
                 <div id="content">
                     <div className="container-fluid p-4">
