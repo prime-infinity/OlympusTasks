@@ -63,7 +63,7 @@ const AddTask = () => {
 
     return (
         
-        <div className="row justify-content-center" style={{height:'1000px'}}>
+        <div className="row justify-content-center">
 
             <div className="col-12 col-md-8 col-lg-6">
 
