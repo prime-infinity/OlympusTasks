@@ -63,30 +63,30 @@ const AddTask = () => {
 
     return (
         
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" style={{height:'1000px'}}>
 
             <div className="col-12 col-md-8 col-lg-6">
 
-            <form onSubmit={addNewTask}>
+                <form onSubmit={addNewTask}>
 
-                <div className="form-group mb-5 text-muted-native">
-                    <label htmlFor="exampleFormControlInput1">Task Name</label> <span className={`float-right ${taskName.trim().length > 50 ? "text-danger":"text-warning "}`}>{taskName.trim().length}</span>
-                    <input value={taskName} type="text" onChange={(e)=>isTypingName(e.target.value)} className="form-control custom-input pt-4 pb-4" id="exampleFormControlInput1" />
-                </div>
+                    <div className="form-group mb-5 text-muted-native">
+                        <label htmlFor="exampleFormControlInput1">Task Name</label> <span className={`float-right ${taskName.trim().length > 50 ? "text-danger":"text-warning "}`}>{taskName.trim().length}</span>
+                        <input value={taskName} type="text" onChange={(e)=>isTypingName(e.target.value)} className="form-control custom-input pt-4 pb-4" id="exampleFormControlInput1" />
+                    </div>
 
-                <div className="form-group text-muted-native mb-4">
-                    <label htmlFor="exampleFormControlTextarea1">Add Note</label> <span className={`float-right ${taskNote.length > 150 ? "text-danger":"text-warning "}`}>{taskNote.length}</span>
-                    <textarea value={taskNote} onChange={(e)=>isTypingNote(e.target.value)} className="form-control custom-input" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
+                    <div className="form-group text-muted-native mb-4">
+                        <label htmlFor="exampleFormControlTextarea1">Add Note</label> <span className={`float-right ${taskNote.length > 150 ? "text-danger":"text-warning "}`}>{taskNote.length}</span>
+                        <textarea value={taskNote} onChange={(e)=>isTypingNote(e.target.value)} className="form-control custom-input" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
 
-                <div className="form-check form-check-inline text-muted-native">
-                    <input className="form-check-input mr-2" value={taskPined} onChange={(e) => setTaskPin(e.currentTarget.checked)} type="checkbox" id="inlineCheckbox1" />
-                    <label className="form-check-label" htmlFor="inlineCheckbox1">Pin Task</label>
-                </div>
+                    <div className="form-check form-check-inline text-muted-native">
+                        <input className="form-check-input mr-2" value={taskPined} onChange={(e) => setTaskPin(e.currentTarget.checked)} type="checkbox" id="inlineCheckbox1" />
+                        <label className="form-check-label" htmlFor="inlineCheckbox1">Pin Task</label>
+                    </div>
 
-                <button disabled={!buttonState} className="btn btn-custom pt-3 pb-3 font-weight-bold mt-5">Add Task</button>
+                    <button disabled={!buttonState} className="btn btn-custom pt-3 pb-3 font-weight-bold mt-5">Add Task</button>
 
-            </form>
+                </form>
 
             </div>
 
