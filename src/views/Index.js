@@ -30,7 +30,7 @@ const Index = () => {
 
                 <div className="row pt-5 justify-content-center">
                     <div className="col-11 col-md-8  text-center font-weight-bold">
-                        <p className="introTextBold pb-3">Manage your tasks <br /> Like a god!</p>
+                        <p className="introTextBold pb-3">Manage your Tasks <br /> Like a <span className="tc2">God!</span>  </p>
                         <Link to="/home"><button onClick={()=>dispatch(saveAppStateToLocal(1))} className="btn btn-custom pt-3 pb-3 font-weight-bold">Get Started</button></Link>
                     </div>
                 </div>

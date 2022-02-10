@@ -19,6 +19,10 @@ this stylesheet is for index page only
 .overflow-x-auto {
   overflow-x: auto;
 }
+.tc2 {
+  color: #e13160;
+  font-size: xxx-large;
+}
 
 /* dash*/
 .dash-wrapper {
