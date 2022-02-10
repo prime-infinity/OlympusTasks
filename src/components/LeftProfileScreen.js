@@ -1,4 +1,4 @@
-import { userPlaceholder } from "./partsofui/icons";
+import { UserPlaceholder } from './partsofui/Icons'
 import { Link } from "react-router-dom";
 
 const LeftProfileScreen = () => {
@@ -10,7 +10,7 @@ const LeftProfileScreen = () => {
                     <div className="row mt-5 pl-4 justify-content-center">
                         
                         <div className="col-10 col-md-2">
-                            {userPlaceholder}
+                            <UserPlaceholder />
                         </div> <br />
 
                         <div className="text-center col-12 pt-4">

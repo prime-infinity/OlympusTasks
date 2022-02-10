@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import EmptyCard from './innerComponents/EmptyCard'
 import Task from './Task'
 
+import { PendingIcon,OngoingIcon,InReviewIcon,DoneIcon } from './partsofui/Icons'
+
 
 const TaskStast = () => {
     const tasks = useSelector((state) => state.task.tasks)
@@ -37,6 +39,7 @@ const TaskStast = () => {
 
     const closeCardDiv = (
     <div onClick={closeCard} className="close-card col-2 col-md-1">
+            {/**this is the icon to close card when it has been cliked */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-theme" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
@@ -57,9 +60,7 @@ const TaskStast = () => {
                             {cardStateChange === -1 ?
                             <div className="col-6">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="footer-icon-selected" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                                </svg>
+                                <PendingIcon w={0} h={0} />
 
                             </div>:divWithFiltered}
 
@@ -87,9 +88,7 @@ const TaskStast = () => {
                             {cardStateChange === -1 ?
                             <div className="col-6 ">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 footer-icon-selected" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
-                                </svg>
+                                <OngoingIcon w={0} h={0} />
 
                             </div>:divWithFiltered}
                         </div>
@@ -115,9 +114,7 @@ const TaskStast = () => {
                             {cardStateChange === -1 ?
                             <div className="col-6 ">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 footer-icon-selected" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                                </svg>
+                              <InReviewIcon w={0} h={0} />  
 
                             </div>:divWithFiltered}
 
@@ -144,9 +141,7 @@ const TaskStast = () => {
                             {cardStateChange === -1 ?
                             <div className="col-6">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 footer-icon-selected" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                </svg>
+                                <DoneIcon w={0} h={0} />
 
                             </div>:divWithFiltered}
                         </div>
