@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit' 
-import { loadFromLocalStorage,saveTasksToLocalStorage } from '../helpers/controlStorage'
+import { loadFromLocal,saveTasksToLocal } from '../helpers/controlStorage'
 
 export const taskSlice = createSlice({
     name: 'task',
@@ -54,12 +54,12 @@ export const { markInreview } = taskSlice.actions
 export const { markDone } = taskSlice.actions
 
 export const getInitTasks = () => async dispatch => {
-  const dataFromGet = await loadFromLocalStorage()
+  const dataFromGet = await loadFromLocal()
   dispatch(getTasks(dataFromGet))
 }
 
 export const saveTaskToAny = () => (dispatch,getState) => {
-  saveTasksToLocalStorage(getState().task.tasks);  
+  saveTasksToLocal(getState().task.tasks);  
 }
 
 export default taskSlice.reducer 

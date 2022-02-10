@@ -1,7 +1,19 @@
 import './index.css';
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux'
+import { saveAppStateToLocal } from '../redux/appSlice';
+
 
 const Index = () => {
+
+    function r(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    const dispatch = useDispatch()
+
     return(
         <div className="container-fluid">
         <div className="row bg-theme">
@@ -14,12 +26,12 @@ const Index = () => {
                     </div>
                 </div>
 
-                <img src="images/gods.png" className="img-fluid" alt="theGodsThemselves" />
+                <img src={`images/zeus${r(1,2)}.png`} className="img-fluid" alt="theGodsThemselves" />
 
                 <div className="row pt-5 justify-content-center">
                     <div className="col-11 col-md-8  text-center font-weight-bold">
                         <p className="introTextBold pb-3">Manage your tasks <br /> Like a god!</p>
-                        <Link to="/home"><button className="btn btn-custom pt-3 pb-3 font-weight-bold">Get Started</button></Link>
+                        <Link to="/home"><button onClick={()=>dispatch(saveAppStateToLocal(1))} className="btn btn-custom pt-3 pb-3 font-weight-bold">Get Started</button></Link>
                     </div>
                 </div>
 

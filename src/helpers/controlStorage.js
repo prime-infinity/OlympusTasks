@@ -1,20 +1,43 @@
-export const loadFromLocalStorage = () => { 
+export const loadFromLocal = () => { 
     try {
-        const persistedState = localStorage.getItem('olmpustasks') 
-                            ? JSON.parse(localStorage.getItem('olmpustasks'))
+        const tasksInLocal = localStorage.getItem('olmpustaskstasks') 
+                            ? JSON.parse(localStorage.getItem('olmpustaskstasks'))
                             : []
-        return persistedState
+        return tasksInLocal
     } catch (e) {
         console.warn(e);
         return undefined;
     }
 }
 
-export const saveTasksToLocalStorage = (tasks) => {
+export const saveTasksToLocal = (tasks) => {
     
     try {
         const serialisedState = JSON.stringify(tasks);
-        localStorage.setItem("olmpustasks", serialisedState);
+        localStorage.setItem("olmpustaskstasks", serialisedState);
+    } catch (e) {
+        console.warn(e);
+    }
+    
+}
+
+export const getStateFromLocal = () => { 
+    try {
+        const appState = localStorage.getItem('olmpustasksappstate') 
+                            ? JSON.parse(localStorage.getItem('olmpustasksappstate'))
+                            : 0
+        return appState
+    } catch (e) {
+        console.warn(e);
+        return undefined;
+    }
+}
+
+export const saveStateToLocal = (state) => {
+    
+    try {
+        const serialisedState = JSON.stringify(state);
+        localStorage.setItem("olmpustasksappstate", serialisedState);
     } catch (e) {
         console.warn(e);
     }
