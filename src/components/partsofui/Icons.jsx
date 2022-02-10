@@ -6,9 +6,9 @@ export const UserPlaceholder = () => {
     )
 }
 
-const setWidth = w =>  w === 0 ? "have" : "1em" 
+const setWidth = w =>  w === 0 ? "100%" : "1em" 
 
-const setHeight = h =>  h === 0 ? "have" : "1em"
+const setHeight = h =>  h === 0 ? "100%" : "1em"
 
 
 export const PendingIcon = ({w,h,s}) => {

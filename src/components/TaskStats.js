@@ -1,41 +1,32 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import EmptyCard from './innerComponents/EmptyCard'
-import Task from './Task'
-
-import { PendingIcon,OngoingIcon,InReviewIcon,DoneIcon } from './partsofui/Icons'
+import TaskStatsCard from './innerComponents/TaskStatsCard'
 
 
 const TaskStast = () => {
     const tasks = useSelector((state) => state.task.tasks)
-    const pendingTasks = tasks.filter((task) => task.cat === 0)
-    const onGoingTasks = tasks.filter((task) => task.cat === 1)
-    const inReviewTasks = tasks.filter((task) => task.cat === 2)
-    const doneTasks = tasks.filter((task) => task.cat === 3)
 
 
     const [cardStateChange, setCardState] = useState(-1)
-    const [fT,setFT] = useState([])
+    const [filteredTasks,setFilteredTasks] = useState([])
 
     
     const closeCard = ()=> {
         setCardState(-1)
     }
 
+    const setCardStateSet = (e)=> {
+        setCardState(e)
+    }
+
     useEffect(()=> {
-        setFT(cardStateChange === -1 ? []:
+        setFilteredTasks(cardStateChange === -1 ? []:
         cardStateChange === 0 ? tasks.filter((task) => task.cat === 0):
         cardStateChange === 1 ? tasks.filter((task) => task.cat === 1):
         cardStateChange === 2?tasks.filter((task) => task.cat === 2):
         cardStateChange===3?tasks.filter((task) => task.cat === 3):
         [])
     },[cardStateChange,tasks])
-
-    const divWithFiltered = (
-        tasks.length === 0 ? <EmptyCard /> : fT.map((task,i) => (
-            <Task task={task} index={i}  key={i}/>
-        ))
-    )
 
     const closeCardDiv = (
     <div onClick={closeCard} className="close-card col-2 col-md-1">
@@ -47,118 +38,15 @@ const TaskStast = () => {
     )
 
     return(
-        <div className="row justify-content-between">
+        <div className="row pb-5 justify-content-between">
 
             <div className="col-12 mb-4 mt-4 mb-4 text-theme">
                 <span className="h3 font-weight-bold">Overview</span>
             </div>
 
-            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
-                <div onClick={()=>setCardState(0)} className={`card py-2 text-muted ${cardStateChange === 0 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
-                    <div className="card-body pt-5 pb-5">
-                        <div className="row justify-content-center text-center pt-md-4 pb-md-4">
-                            {cardStateChange === -1 ?
-                            <div className="col-6">
-                                
-                                <PendingIcon w={0} h={0} />
-
-                            </div>:divWithFiltered}
-
-
-                        </div>
-                    </div>
-                    <div className="card-footer text-muted">
-                        <div className="row">
-                            <div className="col-12">
-                                Pending
-                            </div>
-                                
-                            <div className="col-6 text-right text-theme abs-right">
-                                {pendingTasks.length}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
-                <div onClick={()=>setCardState(1)} className={` card py-2 text-muted ${cardStateChange === 1 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
-                    <div className="card-body pt-5 pb-5">
-                        <div className="row justify-content-center text-center pt-md-4 pb-md-4">
-                            {cardStateChange === -1 ?
-                            <div className="col-6 ">
-
-                                <OngoingIcon w={0} h={0} />
-
-                            </div>:divWithFiltered}
-                        </div>
-                    </div>
-                    <div className="card-footer text-muted">
-                        <div className="row">
-                            <div className="col-12">
-                                Ongoing
-                            </div>
-                            
-                            <div className="col-6 text-right text-theme abs-right">
-                                {onGoingTasks.length}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
-                <div onClick={()=>setCardState(2)} className={` card py-2 text-muted ${cardStateChange === 2 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
-                    <div className="card-body pt-5 pb-5">
-                        <div className="row justify-content-center text-center pt-md-4 pb-md-4">
-                            {cardStateChange === -1 ?
-                            <div className="col-6 ">
-
-                              <InReviewIcon w={0} h={0} />  
-
-                            </div>:divWithFiltered}
-
-                        </div>
-                    </div>
-                    <div className="card-footer ">
-                        <div className="row">
-                            <div className="col-12">
-                                In Review
-                            </div>
-                            
-                            <div className="col-6 text-right text-theme abs-right">
-                                {inReviewTasks.length}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
-                <div onClick={()=>setCardState(3)} className={` card py-2 text-muted ${cardStateChange === 3 ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
-                    <div className="card-body pt-5 pb-5">
-                        <div className="row justify-content-center text-center pt-md-4 pb-md-4">
-                            {cardStateChange === -1 ?
-                            <div className="col-6">
-
-                                <DoneIcon w={0} h={0} />
-
-                            </div>:divWithFiltered}
-                        </div>
-                    </div>
-                    <div className="card-footer text-muted">
-                        <div className="row">
-                            <div className="col-12">
-                                Done
-                            </div>
-                            
-                            <div className="col-6 text-right text-theme abs-right">
-                                {doneTasks.length}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {[0,1,2,3].map((i) => (
+                <TaskStatsCard key={i} i={i} tasks={tasks} cardStateChange={cardStateChange} setCardStateSet={ setCardStateSet } filteredTasks={ filteredTasks } />
+            ))}
 
             {cardStateChange !== -1 ? closeCardDiv:null}
             
