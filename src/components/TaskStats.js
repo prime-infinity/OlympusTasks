@@ -41,7 +41,7 @@ const TaskStast = () => {
         <div className="row pb-5 justify-content-between">
 
             <div className="col-12 mb-4 mt-4 mb-4 text-theme">
-                <span className="h3 font-weight-bold">Overview</span>
+                <span className="h4">Overview</span>
             </div>
 
             {[0,1,2,3].map((i) => (

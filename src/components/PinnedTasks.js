@@ -16,7 +16,7 @@ const PinnedTasks = () => {
 
     const returnCard = (task = {name:"No Pinned tasks"}) => {
         return (
-            <div className="col-12 text-break">
+            <div className="col-12 col-md-8 text-break">
                 <div className="card bg-card-theme py-2">
                     <div className="card-body pt-5 pb-5">
                         <div className="row text-center">
@@ -38,7 +38,7 @@ const PinnedTasks = () => {
 
             
             <div className="col-12 mt-4 mb-4 text-theme">
-                <span className="font-weight-bold h3">
+                <span className="h4">
                     Pinned Tasks
                 </span>
                 
