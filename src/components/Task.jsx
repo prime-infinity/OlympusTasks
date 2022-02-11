@@ -56,7 +56,7 @@ function Task({task,index}) {
                     <div className="row">
 
                         <div className="col-12 text-break text-center">
-                            <span className="h3 font-weight-bold text-theme">{task.name}</span> <br />
+                            <span className="h4 text-theme">{task.name}</span> <br />
                             <span className="font-weight-bold">{task.date}</span> <br />
                         </div>
 
