@@ -26,7 +26,7 @@ const Index = () => {
                     </div>
                 </div>
 
-                <img src={`images/zeus${r(1,2)}.png`} className="img-fluid" alt="theGodsThemselves" />
+                <img src={`images/zeus${r(1,2,3)}.png`} className="img-fluid" alt="theGodsThemselves" />
 
                 <div className="row pt-5 justify-content-center">
                     <div className="col-11 col-md-8  text-center font-weight-bold">
