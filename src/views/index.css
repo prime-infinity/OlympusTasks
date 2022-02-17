@@ -77,6 +77,12 @@ this stylesheet is for index page only
 .bg-card-untheme {
   background-color: #272a5c;
 }
+.card-footer-fixed {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: #272a5c;
+}
 .text-theme {
   color: #f8f3b9;
 }
@@ -175,6 +181,7 @@ this stylesheet is for index page only
   top: 0%;
   height: 100%;
   z-index: 2;
+  overflow: scroll;
 }
 .close-card {
   position: fixed;
@@ -200,6 +207,9 @@ this stylesheet is for index page only
   background-color: #1f214a;
   right: 0%;
 }
+.jsc {
+  justify-content: center !important;
+}
 @media (min-width: 768px) {
   .mobile-view-profile {
     transform: translateX(50%);
@@ -209,4 +219,126 @@ this stylesheet is for index page only
   .left-profile-screen {
     left: 6.5rem;
   }
+}
+/* dropdown */
+.sec-center {
+  position: relative;
+}
+.sec-center > [type="checkbox"]:checked,
+.sec-center > [type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+.section-dropdown {
+  position: absolute;
+  padding: 5px;
+  background-color: #272a5c;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 200ms linear;
+}
+.dropdown:checked ~ .section-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.section-dropdown:before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  content: "";
+  display: block;
+  z-index: 1;
+}
+.section-dropdown:after {
+  position: absolute;
+  top: -7px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #111;
+  content: "";
+  display: block;
+  z-index: 2;
+  transition: all 200ms linear;
+}
+a {
+  position: relative;
+  color: #fff;
+  transition: all 200ms linear;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 2px;
+  padding: 5px 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin: 2px 0;
+  text-align: left;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  -ms-flex-pack: distribute;
+}
+a {
+  font-size: 22px;
+}
+.dropdown-sub:checked + label,
+.dropdown-sub:not(:checked) + label {
+  position: relative;
+  color: #fff;
+  transition: all 200ms linear;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 2px;
+  padding: 5px 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  text-align: left;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  cursor: pointer;
+}
+.dropdown-sub:checked + label,
+.dropdown-sub:not(:checked) + label {
+  font-size: 22px;
+}
+.dropdown-sub:not(:checked) + label {
+  transition: transform 200ms linear;
+}
+.dropdown-sub:checked + label {
+  transform: rotate(135deg);
+  transition: transform 200ms linear;
+}
+.dropdown-sub:checked + label:hover,
+.dropdown-sub:not(:checked) + label:hover {
+  color: #102770;
+  background-color: #ffeba7;
 }

@@ -17,9 +17,9 @@ const DashRightSide = () => {
             <div className={`d-flex flex-column ${menuState === 2 ? "mobile-view-profile":""} `} id="content-wrapper" >
                 
                 <div id="content">
-                    <div className="container-fluid p-4 pl-md-5 pr-md-5" style={{height:'1000px'}}>
+                    <div className="container-fluid p-4 pl-md-0 pr-md-0 pl-lg-5 pr-lg-5" style={{height:'1000px'}}>
                         
-                        <div className="row pl-md-5 pr-md-5 justify-content-center">
+                        <div className="row pl-md-2 pr-md-2 pl-lg-5 pr-lg-5 justify-content-center">
 
                             <div className="col-12 col-md-11">
 

@@ -16,7 +16,7 @@ function TaskStatsCard({ i, tasks,cardStateChange, setCardStateSet,filteredTasks
     )
 
     return (
-        <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 ? "cursor-pointer" : ""} `}>
+        <div className={`col-6 col-md-6 col-lg-3 mb-4 ${cardStateChange === -1 &&  "cursor-pointer" } `}>
             <div onClick={()=>setCardStateSet(i)} className={` card py-2 text-muted ${cardStateChange === i ? "cardFixed bg-card-untheme" : "bg-card-theme"}`}>
                 <div className="card-body pt-5 pb-5">
                     <div className="row justify-content-center text-center pt-md-4 pb-md-4">
@@ -33,7 +33,7 @@ function TaskStatsCard({ i, tasks,cardStateChange, setCardStateSet,filteredTasks
                         </div>:divWithFiltered}
                     </div>
                 </div>
-                <div className="card-footer text-muted">
+                <div className={`card-footer text-muted ${cardStateChange !== -1 && "card-footer-fixed"} `}>
                     <div className="row">
                         <div className="col-12">
                             {i ===0 ? "Pending":
