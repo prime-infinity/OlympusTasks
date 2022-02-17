@@ -10,7 +10,7 @@ const AllTasks = () => {
 
     return(
         
-        <div className="row">
+        <div className="row justify-content-center">
 
             {tasks.length === 0 ? <EmptyCard /> : tasks.map((task,i) => (
 

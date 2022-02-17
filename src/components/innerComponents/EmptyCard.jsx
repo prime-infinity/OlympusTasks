@@ -8,7 +8,7 @@ function EmptyCard() {
     const dispatch = useDispatch()
 
     return ( 
-        <div className="col-12 text-break">
+        <div className="col-12 col-md-6 text-break">
             <div className="card bg-card-theme py-2">
                 <div className="card-body pt-5 pb-5">
                     <div className="row">
