@@ -67,7 +67,7 @@ const AddTask = () => {
 
             <div className="col-12 col-md-8 col-lg-6">
 
-                <form onSubmit={addNewTask}>
+                <form autoComplete="off" onSubmit={addNewTask}>
 
                     <div className="form-group mb-5 text-muted-native">
                         <label htmlFor="exampleFormControlInput1">Task Name</label> <span className={`float-right ${taskName.trim().length > 50 ? "text-danger":"text-warning "}`}>{taskName.trim().length}</span>
