@@ -27,11 +27,16 @@ In its intended final form(which might be subject to changes), it is intended to
 - Users who are subscribed to notifications will be sent notifications on their pending or uncompleted tasks.
 - Users who are signed in can share tasks with other users of the application.
 
+## Usage
+
+- All Tasks are divided into #4 categories #pending, #Ongoing, #InReview and #Done
+
 ## Website
 
 [Olympus Tasks](https://olympustasks.netlify.app/)
 
 ## Media Below,for both mobile and web views (are subject to changes depending on the date of viewing)
+
 ![Screenshot from 2022-02-20 20-58-19](https://user-images.githubusercontent.com/55140896/154862330-d68777de-c9bf-4a6d-9165-944d085c2be9.png)
 ![Screenshot from 2022-02-20 20-58-21](https://user-images.githubusercontent.com/55140896/154862461-4263cb8e-91a3-4ece-99d8-8fc163967d0e.png)
 ![Screenshot from 2022-02-20 20-58-31](https://user-images.githubusercontent.com/55140896/154862466-e811c297-ac25-446e-9639-3d93d40e147b.png)
@@ -44,10 +49,8 @@ In its intended final form(which might be subject to changes), it is intended to
 ![Screenshot from 2022-02-20 21-00-14](https://user-images.githubusercontent.com/55140896/154862520-ddc51a8e-8cd1-42a6-bf1a-a69c3bbd7b6b.png)
 ![Screenshot from 2022-02-20 21-07-58](https://user-images.githubusercontent.com/55140896/154862522-042b0028-2db4-4652-89d9-4fa6108979f5.png)
 
-
 ![Screenshot_20220220-212013_Chrome](https://user-images.githubusercontent.com/55140896/154863092-c9896341-13fd-4202-878b-7e8608add2b1.jpg)
 ![Screenshot_20220220-212349_Chrome](https://user-images.githubusercontent.com/55140896/154863117-cd5874fc-6578-4959-b23c-44dbef7f0fe1.jpg)
 ![Screenshot_20220220-212352_Chrome](https://user-images.githubusercontent.com/55140896/154863123-fb7bdc21-3d91-43e4-82eb-f0c6d44e3ff6.jpg)
 ![Screenshot_20220220-212404_Chrome](https://user-images.githubusercontent.com/55140896/154863137-5410644f-c943-4a84-921a-8d3a4802c126.jpg)
 ![Screenshot_20220220-212415_Chrome](https://user-images.githubusercontent.com/55140896/154863143-2e1f6bd3-402e-4afc-b5c3-62fc7d8faac4.jpg)
-
