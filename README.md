@@ -29,7 +29,14 @@ In its intended final form(which might be subject to changes), it is intended to
 
 ## Usage
 
-- All Tasks are divided into #4 categories #pending, #Ongoing, #InReview and #Done
+- All Tasks are divided into **4** categories **Pending**, **Ongoing**, **InReview** and **Done**.
+- Click on each categories in the homepage to view the tasks in each.
+- Add a task by inputing the name as well as a note describing the task, the note is note necessary.
+- Decide to pin the task(Pinned tasks will have more functionality in future updates).
+- Click on the menu icon of each task to select options of the particular task.
+- Delete a task by clicking on delete icon.**Note: Pinned tasks cannot be deleted**.
+- View the attached message on each task by clicking on message iconi. **Note:If a message was not inputed initially, the message icon will not be present**.
+- Set different states for each tasks, moving in the order **Pending,Ongoing,InReview,Done**.
 
 ## Website
 
