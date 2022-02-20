@@ -45,3 +45,10 @@ In its intended final form(which might be subject to changes), it is intended to
 ![Screenshot from 2022-02-20 21-00-14](https://user-images.githubusercontent.com/55140896/154862520-ddc51a8e-8cd1-42a6-bf1a-a69c3bbd7b6b.png)
 ![Screenshot from 2022-02-20 21-07-58](https://user-images.githubusercontent.com/55140896/154862522-042b0028-2db4-4652-89d9-4fa6108979f5.png)
 
+
+![Screenshot_20220220-212013_Chrome](https://user-images.githubusercontent.com/55140896/154863092-c9896341-13fd-4202-878b-7e8608add2b1.jpg)
+![Screenshot_20220220-212349_Chrome](https://user-images.githubusercontent.com/55140896/154863117-cd5874fc-6578-4959-b23c-44dbef7f0fe1.jpg)
+![Screenshot_20220220-212352_Chrome](https://user-images.githubusercontent.com/55140896/154863123-fb7bdc21-3d91-43e4-82eb-f0c6d44e3ff6.jpg)
+![Screenshot_20220220-212404_Chrome](https://user-images.githubusercontent.com/55140896/154863137-5410644f-c943-4a84-921a-8d3a4802c126.jpg)
+![Screenshot_20220220-212415_Chrome](https://user-images.githubusercontent.com/55140896/154863143-2e1f6bd3-402e-4afc-b5c3-62fc7d8faac4.jpg)
+
