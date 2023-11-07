@@ -1,14 +1,10 @@
+import BottomNavBar from "./components/navigation/BottomNavBar";
 import SideBar from "./components/navigation/SideBar";
 
 export default function Home() {
   return (
     <>
-      <div className="">
-        <SideBar />
-      </div>
-      <div className="ml-24 p-4">
-        <main>main</main>
-      </div>
+      <div>go to /home</div>
     </>
   );
 }
