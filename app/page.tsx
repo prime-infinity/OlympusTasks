@@ -4,7 +4,7 @@ import SideBar from "./components/navigation/SideBar";
 export default function Home() {
   return (
     <>
-      <div>visit to /home</div>
+      <div>go to /home</div>
     </>
   );
 }
