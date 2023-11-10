@@ -18,7 +18,7 @@ export default function HomeLayout({
         {/* Show on mobile screens only */}
         <BottomNavBar />
       </div>
-      <div className="md:ml-24 p-4">
+      <div className="md:ml-24 px-4 md:px-32 border">
         <main>{children}</main>
       </div>
     </>
