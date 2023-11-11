@@ -21,7 +21,7 @@ export const tasks: Task[] = [
     id: 1697120820001,
     name: "task three",
     note: "somenotes on task three",
-    pinned: true,
+    pinned: false,
     date: "12-10-2023",
     category: 0,
   },
