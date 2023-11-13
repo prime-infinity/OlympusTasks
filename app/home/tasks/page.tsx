@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import Loading from "./loading";
 import TaskHolder from "./TaskHolder";
+import Loading from "./loading";
 
 export default function Tasks() {
   return (
