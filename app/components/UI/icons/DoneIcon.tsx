@@ -6,7 +6,7 @@ const DoneIcon: React.FC<Icons> = ({ width }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className={`w-${width} h-${width}`}
+      className={`w-6 h-6`}
     >
       <path
         fillRule="evenodd"

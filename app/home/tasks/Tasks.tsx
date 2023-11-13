@@ -40,6 +40,7 @@ const Tasks: React.FC<IProp> = ({ data }) => {
           ) : data.category === 2 ? (
             <CautionIcon width={6} />
           ) : null}
+
           <span className="text-xs pl-1">
             {data.category === 3
               ? "done "
