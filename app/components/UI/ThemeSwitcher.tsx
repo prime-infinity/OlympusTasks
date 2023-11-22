@@ -19,7 +19,7 @@ const ThemeSwitcher: React.FC = () => {
     <div>
       the current theme is: <span className="font-bold">{theme}</span>{" "}
       <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-        <option value="system">System</option>
+        {/*<option value="system">System</option>*/}
         <option value="dark">Dark</option>
         <option value="light">Light</option>
       </select>

@@ -3,7 +3,7 @@ import Icon from "./icons/Icon";
 export default function SideBar() {
   return (
     <>
-      <div className="bg-white border w-24 h-screen fixed top-0 left-0 flex flex-col justify-center">
+      <div className="bg-gray-200 dark:bg-black  border w-24 h-screen fixed top-0 left-0 flex flex-col justify-center">
         {/* Sidebar content */}
         <ul>
           <div className="my-8 flex justify-center">

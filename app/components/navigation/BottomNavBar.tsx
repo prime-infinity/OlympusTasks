@@ -2,7 +2,7 @@ import Icon from "./icons/Icon";
 
 export default function BottomNavBar() {
   return (
-    <div className="bg-white border w-full h-14 fixed bottom-0 left-0 flex justify-center items-center">
+    <div className="bg-gray-200 dark:bg-black w-full h-14 fixed bottom-0 left-0 flex justify-center items-center">
       <ul className="flex">
         <div className="mx-4">
           <Icon path="/home" />

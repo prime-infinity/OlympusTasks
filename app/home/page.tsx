@@ -5,7 +5,7 @@ export default function Homepage() {
     <div className="grid grid-cols-1">
       home page
       <div className="border col-span-1 md:col-span-2">
-        home nav bar
+        <span className=""> home nav bar</span>
         <ThemeSwitcher />
       </div>
     </div>
