@@ -12,8 +12,8 @@ interface IProp {
 }
 const Tasks: React.FC<IProp> = ({ data }) => {
   return (
-    <div className="border-2 rounded-xl my-4 card">
-      <div className="flex justify-between border-b py-1 bg-gray-200">
+    <div className="my-4 card">
+      <div className="flex rounded-t-xl justify-between border-b py-1 bg-gray-200">
         <span className="pl-3 flex items-center">
           {data.pinned ? <UnpinIcon width={6} /> : <PinIcon width={6} />}
           {data.pinned ? (
@@ -29,7 +29,7 @@ const Tasks: React.FC<IProp> = ({ data }) => {
         <br />
         <span className="text-xs">{data.date}</span>
       </div>
-      <div className="flex justify-between border-t py-1 bg-gray-200">
+      <div className="flex justify-between border-t rounded-b-xl py-1 bg-gray-200">
         <span className="pl-3 flex items-center">
           {data.category === 3 ? (
             <DoneIcon width={6} />

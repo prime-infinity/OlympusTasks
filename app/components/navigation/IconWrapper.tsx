@@ -14,7 +14,7 @@ const IconWrapper: React.FC<IconWrapperProps> = ({ path, children }) => {
     <div
       className={`${
         isActive ? "bg-gray-300" : ""
-      } cursor-pointer rounded-lg hover:bg-gray-300 transition-all`}
+      } cursor-pointer rounded-lg hover:bg-gray-200 transition-all`}
     >
       {children}
     </div>
