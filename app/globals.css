@@ -3,22 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-color: #fafafa;
   color: #000;
 }
-
-/*.navbar{}
-.card{
-
-}
-
-[data-theme="dark"] body{
-  background-color: #222;
-  color: #ffffff;
-}
-
-[data-theme="original"] body{
-  background-color: #272a5c;
-  color: #ffffff;
-}
-*/
