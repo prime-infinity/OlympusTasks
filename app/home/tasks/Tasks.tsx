@@ -12,7 +12,7 @@ interface IProp {
 }
 const Tasks: React.FC<IProp> = ({ data }) => {
   return (
-    <div className="my-4 card">
+    <div className="my-4">
       <div className="flex rounded-t-xl justify-between py-1 bg-gray-100 border-2 dark:border dark:bg-gray-800">
         <span className="pl-3 flex items-center">
           {data.pinned ? <UnpinIcon width={6} /> : <PinIcon width={6} />}
