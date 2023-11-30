@@ -13,7 +13,7 @@ interface IProp {
 const Tasks: React.FC<IProp> = ({ data }) => {
   return (
     <div className="my-4 card">
-      <div className="flex rounded-t-xl justify-between py-1 bg-gray-100 border-b-2 dark:border-b dark:bg-gray-800">
+      <div className="flex rounded-t-xl justify-between py-1 bg-gray-100 border-2 dark:border dark:bg-gray-800">
         <span className="pl-3 flex items-center">
           {data.pinned ? <UnpinIcon width={6} /> : <PinIcon width={6} />}
           {data.pinned ? (
@@ -24,12 +24,12 @@ const Tasks: React.FC<IProp> = ({ data }) => {
         </span>
         <span className="pr-3 hidden"></span>
       </div>
-      <div className="text-center py-6 bg-gray-100 dark:bg-gray-800">
+      <div className="text-center py-6 bg-gray-100 border-l-2 border-r-2 dark:border-r dark:border-l dark:bg-gray-800">
         <span className="text-lg">{data.name}</span>
         <br />
         <span className="text-xs">{data.date}</span>
       </div>
-      <div className="flex justify-between rounded-b-xl py-1 bg-gray-100 border-t-2 dark:border-t dark:bg-gray-800 ">
+      <div className="flex justify-between rounded-b-xl py-1 bg-gray-100 border-2 dark:border dark:bg-gray-800 ">
         <span className="pl-3 flex items-center">
           {data.category === 3 ? (
             <DoneIcon width={6} />
