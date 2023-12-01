@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import ThemeSwitcher from "../components/UI/ThemeSwitcher";
-import PendingIcon from "../components/UI/icons/PendingIcon";
 import OverviewHolder from "./OverviewHolder";
 import Loading from "./loading";
 
