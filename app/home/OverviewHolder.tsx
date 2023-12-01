@@ -12,7 +12,7 @@ export default function OverviewHolder() {
           />
         }
         status={`pending`}
-        number={1}
+        number={13}
       />
 
       <OverviewCard
