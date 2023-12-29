@@ -54,7 +54,7 @@ const AddTaskForm: React.FC = () => {
           value={taskName}
           onChange={handleTaskNameChange}
           disabled={taskNameCount <= 0}
-          className="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+          className="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 dark:bg-black"
         />
       </div>
       <div className="mt-4">
@@ -69,7 +69,7 @@ const AddTaskForm: React.FC = () => {
           value={taskDescription}
           onChange={handleTaskDescriptionChange}
           disabled={taskDescriptionCount <= 0}
-          className="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+          className="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 dark:bg-black"
         />
       </div>
       <div className="mt-4 flex items-center">

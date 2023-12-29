@@ -6,7 +6,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
   number,
 }) => {
   return (
-    <div className="border-2 dark:border rounded-xl bg-gray-100 dark:bg-gray-800 flex flex-col items-center md:pt-24 pt-12 my-2 md:my-0">
+    <div className="border-2 dark:border rounded-xl bg-gray-100 dark:bg-gray-950 flex flex-col items-center md:pt-24 pt-12 my-2 md:my-0">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -17,7 +17,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
       </svg>
       <div className="border-t-2 flex place-content-around  dark:border-t w-full text-center mt-12 md:mt-24 py-2">
         {status}
-        <span className="bg-gray-300 rounded-sm px-2 text-xs items-center flex">
+        <span className="bg-gray-300 dark:border dark:bg-gray-950 rounded-sm px-2 text-xs items-center flex">
           {number}
         </span>
       </div>
