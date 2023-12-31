@@ -1,5 +1,7 @@
 "use client";
 import { useState, ChangeEvent } from "react";
+import { taskDB } from "@/app/helpers/indexedDB";
+import { Task } from "@/app/interfaces/ITask";
 
 const AddTaskForm: React.FC = () => {
   const [taskName, setTaskName] = useState<string>("");
@@ -26,12 +28,28 @@ const AddTaskForm: React.FC = () => {
     setPinTask(!pinTask);
   };
 
-  const handleAddTask = () => {
+  const handleAddTask = async () => {
     // Implement your logic to add the task here
     console.log("Task Name:", taskName);
-    console.log("Task Description:", taskDescription);
+    console.log("Task Note:", taskDescription);
     console.log("Pin Task:", pinTask);
     // Reset the form after adding the task
+
+    const newTask: Task = {
+      name: taskName,
+      note: taskDescription,
+      pinned: pinTask,
+      date: new Date().toDateString(),
+      category: 0, // Set the initial state as needed
+    };
+
+    try {
+      const taskId = await taskDB.tasks.add(newTask);
+      console.log("Task added with ID:", taskId);
+    } catch (error) {
+      console.error("Error adding task:", error);
+    }
+
     setTaskName("");
     setTaskDescription("");
     setPinTask(false);
