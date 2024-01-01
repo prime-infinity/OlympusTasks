@@ -1,3 +1,4 @@
+import CategoryCount from "../components/UI/components/CategoryCount";
 import OverviewCard from "../components/UI/components/OverviewCard";
 
 export default function OverviewHolder() {
@@ -12,7 +13,7 @@ export default function OverviewHolder() {
           />
         }
         status={`pending`}
-        number={13}
+        number={<CategoryCount category={0} />}
       />
 
       <OverviewCard
@@ -24,7 +25,7 @@ export default function OverviewHolder() {
           />
         }
         status={`ongoing`}
-        number={2}
+        number={<CategoryCount category={1} />}
       />
 
       <OverviewCard
@@ -36,7 +37,7 @@ export default function OverviewHolder() {
           />
         }
         status={`in review`}
-        number={5}
+        number={<CategoryCount category={2} />}
       />
 
       <OverviewCard
@@ -48,7 +49,7 @@ export default function OverviewHolder() {
           />
         }
         status={`done`}
-        number={15}
+        number={<CategoryCount category={3} />}
       />
     </>
   );

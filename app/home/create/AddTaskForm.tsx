@@ -1,5 +1,5 @@
 "use client";
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import { taskDB } from "@/app/helpers/indexedDB";
 import { Task } from "@/app/interfaces/ITask";
 
@@ -9,6 +9,7 @@ const AddTaskForm: React.FC = () => {
   const [pinTask, setPinTask] = useState<boolean>(false);
   const [taskNameCount, setTaskNameCount] = useState<number>(50);
   const [taskDescriptionCount, setTaskDescriptionCount] = useState<number>(100);
+  const [showPopup, setShowPopup] = useState<boolean>(false);
 
   const handleTaskNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -29,12 +30,6 @@ const AddTaskForm: React.FC = () => {
   };
 
   const handleAddTask = async () => {
-    // Implement your logic to add the task here
-    console.log("Task Name:", taskName);
-    console.log("Task Note:", taskDescription);
-    console.log("Pin Task:", pinTask);
-    // Reset the form after adding the task
-
     const newTask: Task = {
       name: taskName,
       note: taskDescription,
@@ -46,6 +41,7 @@ const AddTaskForm: React.FC = () => {
     try {
       const taskId = await taskDB.tasks.add(newTask);
       console.log("Task added with ID:", taskId);
+      setShowPopup(true);
     } catch (error) {
       console.error("Error adding task:", error);
     }
@@ -56,6 +52,16 @@ const AddTaskForm: React.FC = () => {
     setTaskNameCount(50);
     setTaskDescriptionCount(100);
   };
+
+  useEffect(() => {
+    // Hide the popup after 2 seconds
+    const timeoutId = setTimeout(() => {
+      setShowPopup(false);
+    }, 1500);
+
+    // Cleanup the timeout on component unmount or when the popup is hidden manually
+    return () => clearTimeout(timeoutId);
+  }, [showPopup]);
 
   return (
     <div className="w-full md:w-2/4 mx-auto rounded-md flex flex-col">
@@ -111,6 +117,13 @@ const AddTaskForm: React.FC = () => {
       >
         Add Task
       </button>
+
+      {/* Popup */}
+      {showPopup && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white py-2 px-6 rounded-md">
+          Task added!
+        </div>
+      )}
     </div>
   );
 };
