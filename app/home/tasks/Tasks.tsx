@@ -1,10 +1,10 @@
 import CautionIcon from "@/app/components/UI/icons/CautionIcon";
 import DoneIcon from "@/app/components/UI/icons/DoneIcon";
 import OngoingIcon from "@/app/components/UI/icons/OngoingIcon";
-import OptionIcon from "@/app/components/UI/icons/OptionsIcon";
 import PendingIcon from "@/app/components/UI/icons/PendingIcon";
 import PinIcon from "@/app/components/UI/icons/PinIcon";
 import UnpinIcon from "@/app/components/UI/icons/UnpinIcon";
+import DeleteTask from "@/app/components/interactions/DeleteTask";
 import { Task } from "@/app/interfaces/ITask";
 
 interface IProp {
@@ -57,9 +57,7 @@ const Tasks: React.FC<IProp> = ({ data }) => {
           </span>
         </span>
 
-        <span className="pr-3">
-          <OptionIcon width={6} />
-        </span>
+        <DeleteTask id={data.id} />
       </div>
     </div>
   );
