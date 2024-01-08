@@ -24,8 +24,10 @@ const Tasks: React.FC<IProp> = ({ data }) => {
         </span>
         <span className="pr-3 hidden"></span>
       </div>
-      <div className="text-center py-6 bg-gray-100 border-l-2 border-r-2 dark:border-r dark:border-l dark:bg-gray-950">
+      <div className="text-center py-6 px-10 bg-gray-100 border-l-2 border-r-2 dark:border-r dark:border-l dark:bg-gray-950">
         <span className="text-lg">{data.name}</span>
+        <br />
+        <span className="text-sm">{data.note}</span>
         <br />
         <span className="text-xs">{data.date}</span>
       </div>

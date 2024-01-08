@@ -7,14 +7,16 @@ const AddTaskForm: React.FC = () => {
   const [taskName, setTaskName] = useState<string>("");
   const [taskDescription, setTaskDescription] = useState<string>("");
   const [pinTask, setPinTask] = useState<boolean>(false);
-  const [taskNameCount, setTaskNameCount] = useState<number>(50);
-  const [taskDescriptionCount, setTaskDescriptionCount] = useState<number>(100);
+  const [taskNameCount, setTaskNameCount] = useState<number>(20);
+  const [taskDescriptionCount, setTaskDescriptionCount] = useState<number>(50);
   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [showEmptyFieldsPopup, setShowEmptyFieldsPopup] =
+    useState<boolean>(false);
 
   const handleTaskNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setTaskName(value);
-    setTaskNameCount(50 - value.length);
+    setTaskNameCount(20 - value.length);
   };
 
   const handleTaskDescriptionChange = (
@@ -22,7 +24,7 @@ const AddTaskForm: React.FC = () => {
   ) => {
     const value = event.target.value;
     setTaskDescription(value);
-    setTaskDescriptionCount(100 - value.length);
+    setTaskDescriptionCount(50 - value.length);
   };
 
   const handlePinTaskChange = () => {
@@ -30,6 +32,12 @@ const AddTaskForm: React.FC = () => {
   };
 
   const handleAddTask = async () => {
+    // Validation: Check if either taskName or taskDescription is empty
+    if (!taskName.trim()) {
+      setShowEmptyFieldsPopup(true);
+      return;
+    }
+
     const newTask: Task = {
       name: taskName,
       note: taskDescription,
@@ -57,11 +65,12 @@ const AddTaskForm: React.FC = () => {
     // Hide the popup after 2 seconds
     const timeoutId = setTimeout(() => {
       setShowPopup(false);
+      setShowEmptyFieldsPopup(false);
     }, 1500);
 
     // Cleanup the timeout on component unmount or when the popup is hidden manually
     return () => clearTimeout(timeoutId);
-  }, [showPopup]);
+  }, [showPopup, showEmptyFieldsPopup]);
 
   return (
     <div className="w-full md:w-2/4 mx-auto rounded-md flex flex-col">
@@ -122,6 +131,12 @@ const AddTaskForm: React.FC = () => {
       {showPopup && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white py-2 px-6 rounded-md">
           Task added!
+        </div>
+      )}
+      {/* Empty fields popup */}
+      {showEmptyFieldsPopup && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-400 text-white py-2 px-6 rounded-md">
+          Task name cannot be empty!
         </div>
       )}
     </div>
